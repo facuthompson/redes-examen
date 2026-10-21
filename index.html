@@ -2,32 +2,291 @@
 const pages={"inicio": {"body": "<header><span>↳</span> modo práctica</header><main><div class=\"eyebrow\">Redes y Comunicación</div><h1>Elegí tu próximo<br>examen de práctica.</h1><p class=\"intro\">Dos exámenes, un solo lugar para estudiar. Podés empezar uno y continuar el otro cuando quieras.</p><div class=\"cards\">\n<section class=\"card\"><span class=\"badge\">EXAMEN 01 · ORIGINAL</span><h2>Seguridad en redes</h2><div class=\"count\">23 <small>preguntas · 3 opciones</small></div><p>Conceptos fundamentales, ataques, herramientas de protección, diseño de redes, normativa y configuración segura.</p><a class=\"button\" href=\"#seguridad\">Practicar seguridad →</a></section>\n<section class=\"card\"><span class=\"badge\">EXAMEN 02 · GUÍA DEL PDF</span><h2>Redes y Packet Tracer</h2><div class=\"count\">32 <small>preguntas · 3 opciones</small></div><p>Las preguntas del final de tu guía: 18 de seguridad y 14 de Packet Tracer, dispositivos, cables y conexiones.</p><a class=\"button\" href=\"#guia-packet-tracer\">Practicar la guía →</a></section>\n</div><p class=\"features\">✓ Orden aleatorio en cada intento &nbsp; · &nbsp; ✓ Corrección con explicaciones &nbsp; · &nbsp; ✓ Resultados por tema</p><p class=\"note\">Cada examen guarda su avance de manera independiente en este navegador. Si cambiás de navegador o de dirección web, el avance anterior no se transfiere automáticamente.</p></main>", "css": "*{box-sizing:border-box}body{margin:0;background:#f5f6f0;color:#183b32;font-family:system-ui,-apple-system,Segoe UI,sans-serif}header{padding:22px max(24px,calc((100vw - 1040px)/2));background:#fffef9;border-bottom:1px solid #d9dfd3;font-weight:800}header span{background:#153d32;color:#e7f19b;border-radius:8px;padding:5px 10px;margin-right:10px}main{max-width:1040px;margin:auto;padding:65px 24px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:750;color:#607168}h1{font-size:clamp(36px,6vw,56px);letter-spacing:-2px;line-height:1.12;margin:18px 0}p{color:#607168;line-height:1.7}.intro{max-width:600px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}.card{background:#fffef9;border:1px solid #dce2d5;border-radius:18px;padding:28px;display:flex;flex-direction:column}.badge{font-size:12px;font-weight:700;background:#edf2d8;border-radius:20px;padding:7px 12px;align-self:flex-start}h2{font-size:27px;line-height:1.25;letter-spacing:-.7px;margin:22px 0 8px}.count{font-size:40px;font-weight:750;letter-spacing:-1px;margin:12px 0}.count small{font-size:14px;letter-spacing:0;font-weight:400;color:#607168}.card p{flex-grow:1}.button{display:block;text-align:center;background:#153d32;color:white;text-decoration:none;border-radius:10px;padding:15px 20px;font-weight:650;margin-top:20px}.button:hover{background:#285542}a:focus-visible{outline:3px solid #b87518;outline-offset:4px}.features{border-top:1px solid #d9dfd3;margin-top:36px;padding-top:20px;font-size:14px}.note{font-size:12px;margin-top:26px}@media(max-width:680px){main{padding:35px 18px}.cards{grid-template-columns:1fr}.card{padding:24px}}", "title": "Mis exámenes · Redes y seguridad"}, "seguridad": {"body": "<header><div class=\"brand\"><span>↳</span> modo práctica</div><div class=\"small\"><a href=\"#inicio\" style=\"margin-right:16px;text-decoration:none;font-weight:650\">← Elegir examen</a>Redes / Seguridad</div></header><main><div class=\"eyebrow\">Prepará tu parcial</div><h1>Seguridad en redes.</h1><p class=\"intro\">23 preguntas para poner a prueba lo que sabés. Elegí una respuesta por pregunta y revisá las explicaciones al finalizar.</p><div id=\"app\"></div><footer>Práctica de estudio · 1 punto por respuesta correcta · Sin límite de tiempo<br>El orden de las preguntas y de las opciones cambia en cada intento. Tu progreso se guarda en este navegador cuando está disponible.</footer></main><dialog id=\"confirm\"><h2>¿Entregar el examen?</h2><p id=\"confirm-text\"></p><div class=\"dialog-actions\"><button class=\"btn\" id=\"cancel\">Seguir respondiendo</button><button class=\"btn primary\" id=\"deliver\">Ver resultado</button></div></dialog>", "css": "\n:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#183b32;background:#f5f6f0;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button,a,label{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #b87518;outline-offset:4px}header{border-bottom:1px solid #d9dfd3;padding:19px max(24px,calc((100vw - 1120px)/2));display:flex;justify-content:space-between;align-items:center;background:#fffef9}.brand{font-weight:800;letter-spacing:-.6px}.brand span{background:#153d32;color:#e7f19b;padding:6px 10px;border-radius:8px;margin-right:10px}.small,small{font-size:13px;color:#607168}main{max-width:1120px;margin:0 auto;padding:40px 24px 70px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800;color:#607168}h1{font-size:clamp(32px,5vw,52px);letter-spacing:-2px;line-height:1.1;margin:14px 0}h2{font-size:25px;letter-spacing:-.6px;line-height:1.35}p{line-height:1.65}.intro{max-width:660px;color:#607168}.layout{display:grid;grid-template-columns:240px 1fr;gap:28px;margin-top:32px}.panel{background:#fffef9;border:1px solid #dce2d5;border-radius:18px;padding:26px}.sidebar{align-self:start;position:sticky;top:20px}.count{font-size:27px;font-weight:750}.progress{height:6px;background:#e6eadd;border-radius:10px;margin:14px 0 23px;overflow:hidden}.progress>div{height:100%;background:#557b42;transition:width .2s}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.jump{border:1px solid #dce2d5;border-radius:8px;background:transparent;padding:9px 0;color:#526257}.jump.answered{background:#e8efcc;border-color:#cbd8a8;color:#244734}.jump.current{background:#153d32;color:white;border-color:#153d32}.badge{display:inline-block;background:#edf0e5;border-radius:20px;padding:6px 11px;font-size:12px;font-weight:650;margin:0 6px 8px 0}.topic{color:#536f3f;background:#edf2d8}.question-number{font-size:12px;color:#6b766e;margin:17px 0 0}.options{display:grid;gap:12px;margin:26px 0}.option{display:flex;align-items:flex-start;gap:12px;border:1px solid #dbe1d4;border-radius:12px;padding:17px;cursor:pointer;line-height:1.55;transition:background .15s}.option:hover{background:#f5f7ef}.option:has(input:checked){border-color:#436c4d;background:#eef3df;box-shadow:0 0 0 1px #436c4d}.option input{margin-top:5px;accent-color:#254d3e;width:16px;height:16px;flex-shrink:0}.letter{font-weight:750;color:#607168}.actions{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #e6eadd;padding-top:23px}.btn{border:1px solid #cdd7c7;padding:12px 18px;border-radius:9px;font-weight:650;background:#fffef9;color:#244734}.primary{background:#153d32;color:#fff;border-color:#153d32}.btn:disabled{opacity:.4;cursor:default}.finish{width:100%;margin-top:22px}.note{font-size:12px;line-height:1.7;color:#607168}.score{background:#153d32;color:#f8f9ef;border-radius:18px;padding:30px;display:flex;justify-content:space-between;gap:24px;align-items:center;margin:30px 0}.score strong{font-size:55px;letter-spacing:-2px}.score p{margin:0;color:#d0dfcc}.score .btn{background:#e9f2a5;color:#153d32;border:0}.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 30px}.topic-result{padding:18px;border:1px solid #dce2d5;border-radius:12px;background:#fffef9}.topic-result strong{display:block;margin-top:8px}.review{margin:14px 0}.review h3{font-size:19px;line-height:1.5}.status{font-size:12px;font-weight:750}.good{color:#32673d}.bad{color:#ac4630}.answer{padding:12px 16px;border-radius:8px;background:#eef3e5}.wrong{background:#fff0e9;color:#843f2b}.explain{color:#4f6256;font-size:15px}.source{font-size:13px;color:#365d3f}.filter{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.filter .active{background:#153d32;color:white}footer{font-size:12px;color:#6b766e;margin-top:28px}dialog{max-width:440px;border:1px solid #dce2d5;border-radius:18px;padding:28px;color:#183b32;background:#fffef9}dialog::backdrop{background:#142b2690}.dialog-actions{display:flex;gap:12px;justify-content:flex-end}#save-note{min-height:18px}a{color:#365d3f}@media(max-width:720px){main{padding:26px 16px 45px}.layout{grid-template-columns:1fr;gap:16px;margin-top:24px}.sidebar{position:static;padding:18px}.grid{grid-template-columns:repeat(12,1fr);gap:5px}.jump{font-size:12px;padding:7px 0}.sidebar .note{display:none}.finish{margin-top:14px}.progress{margin:8px 0 14px}.count{font-size:20px}.panel{padding:20px}header{padding:17px}.topics{grid-template-columns:repeat(2,1fr)}.score{flex-direction:column;align-items:flex-start}.question-number{margin-top:9px}.options{margin-top:20px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}\n", "title": "Examen · Seguridad en redes"}, "guia-packet-tracer": {"body": "<header><div class=\"brand\"><span>↳</span> modo práctica</div><div class=\"small\"><a href=\"#inicio\" style=\"margin-right:16px;text-decoration:none;font-weight:650\">← Elegir examen</a>Examen 2 / Guía de estudio</div></header><main><div class=\"eyebrow\">Examen de la guía · Independiente</div><h1>Redes y Packet Tracer.</h1><p class=\"intro\">32 preguntas de tu guía: 18 de seguridad y 14 de Packet Tracer y conexiones. Elegí una respuesta por pregunta y revisá las explicaciones al finalizar.</p><div id=\"app\"></div><footer>Preguntas de las secciones 8 y 9 de la guía · 1 punto por respuesta correcta · Sin límite de tiempo<br>El orden de las preguntas y de las opciones cambia en cada intento. Tu progreso se guarda en este navegador cuando está disponible.</footer></main><dialog id=\"confirm\"><h2>¿Entregar el examen?</h2><p id=\"confirm-text\"></p><div class=\"dialog-actions\"><button class=\"btn\" id=\"cancel\">Seguir respondiendo</button><button class=\"btn primary\" id=\"deliver\">Ver resultado</button></div></dialog>", "css": "\n:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#183b32;background:#f5f6f0;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button,a,label{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #b87518;outline-offset:4px}header{border-bottom:1px solid #d9dfd3;padding:19px max(24px,calc((100vw - 1120px)/2));display:flex;justify-content:space-between;align-items:center;background:#fffef9}.brand{font-weight:800;letter-spacing:-.6px}.brand span{background:#153d32;color:#e7f19b;padding:6px 10px;border-radius:8px;margin-right:10px}.small,small{font-size:13px;color:#607168}main{max-width:1120px;margin:0 auto;padding:40px 24px 70px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800;color:#607168}h1{font-size:clamp(32px,5vw,52px);letter-spacing:-2px;line-height:1.1;margin:14px 0}h2{font-size:25px;letter-spacing:-.6px;line-height:1.35}p{line-height:1.65}.intro{max-width:660px;color:#607168}.layout{display:grid;grid-template-columns:240px 1fr;gap:28px;margin-top:32px}.panel{background:#fffef9;border:1px solid #dce2d5;border-radius:18px;padding:26px}.sidebar{align-self:start;position:sticky;top:20px}.count{font-size:27px;font-weight:750}.progress{height:6px;background:#e6eadd;border-radius:10px;margin:14px 0 23px;overflow:hidden}.progress>div{height:100%;background:#557b42;transition:width .2s}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.jump{border:1px solid #dce2d5;border-radius:8px;background:transparent;padding:9px 0;color:#526257}.jump.answered{background:#e8efcc;border-color:#cbd8a8;color:#244734}.jump.current{background:#153d32;color:white;border-color:#153d32}.badge{display:inline-block;background:#edf0e5;border-radius:20px;padding:6px 11px;font-size:12px;font-weight:650;margin:0 6px 8px 0}.topic{color:#536f3f;background:#edf2d8}.question-number{font-size:12px;color:#6b766e;margin:17px 0 0}.options{display:grid;gap:12px;margin:26px 0}.option{display:flex;align-items:flex-start;gap:12px;border:1px solid #dbe1d4;border-radius:12px;padding:17px;cursor:pointer;line-height:1.55;transition:background .15s}.option:hover{background:#f5f7ef}.option:has(input:checked){border-color:#436c4d;background:#eef3df;box-shadow:0 0 0 1px #436c4d}.option input{margin-top:5px;accent-color:#254d3e;width:16px;height:16px;flex-shrink:0}.letter{font-weight:750;color:#607168}.actions{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #e6eadd;padding-top:23px}.btn{border:1px solid #cdd7c7;padding:12px 18px;border-radius:9px;font-weight:650;background:#fffef9;color:#244734}.primary{background:#153d32;color:#fff;border-color:#153d32}.btn:disabled{opacity:.4;cursor:default}.finish{width:100%;margin-top:22px}.note{font-size:12px;line-height:1.7;color:#607168}.score{background:#153d32;color:#f8f9ef;border-radius:18px;padding:30px;display:flex;justify-content:space-between;gap:24px;align-items:center;margin:30px 0}.score strong{font-size:55px;letter-spacing:-2px}.score p{margin:0;color:#d0dfcc}.score .btn{background:#e9f2a5;color:#153d32;border:0}.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 30px}.topic-result{padding:18px;border:1px solid #dce2d5;border-radius:12px;background:#fffef9}.topic-result strong{display:block;margin-top:8px}.review{margin:14px 0}.review h3{font-size:19px;line-height:1.5}.status{font-size:12px;font-weight:750}.good{color:#32673d}.bad{color:#ac4630}.answer{padding:12px 16px;border-radius:8px;background:#eef3e5}.wrong{background:#fff0e9;color:#843f2b}.explain{color:#4f6256;font-size:15px}.source{font-size:13px;color:#365d3f}.filter{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.filter .active{background:#153d32;color:white}footer{font-size:12px;color:#6b766e;margin-top:28px}dialog{max-width:440px;border:1px solid #dce2d5;border-radius:18px;padding:28px;color:#183b32;background:#fffef9}dialog::backdrop{background:#142b2690}.dialog-actions{display:flex;gap:12px;justify-content:flex-end}#save-note{min-height:18px}a{color:#365d3f}@media(max-width:720px){main{padding:26px 16px 45px}.layout{grid-template-columns:1fr;gap:16px;margin-top:24px}.sidebar{position:static;padding:18px}.grid{grid-template-columns:repeat(12,1fr);gap:5px}.jump{font-size:12px;padding:7px 0}.sidebar .note{display:none}.finish{margin-top:14px}.progress{margin:8px 0 14px}.count{font-size:20px}.panel{padding:20px}header{padding:17px}.topics{grid-template-columns:repeat(2,1fr)}.score{flex-direction:column;align-items:flex-start}.question-number{margin-top:9px}.options{margin-top:20px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}\n", "title": "Examen · Redes y Packet Tracer"}};
 const start={"seguridad":function(){
 const QUESTIONS = [
-['Conceptos fundamentales','Seguridad en redes','¿Qué busca la seguridad en redes y por qué resulta cada vez más relevante?', ['Proteger datos, dispositivos y comunicaciones ante riesgos que crecen con la conectividad.','Aumentar el ancho de banda para que todos los dispositivos naveguen más rápido.','Mantener únicamente el hardware para evitar fallas físicas.'], 'La seguridad reduce riesgos para la información y los servicios. La velocidad y el mantenimiento físico pueden ayudar a operar, pero no cubren accesos indebidos, fraude ni ataques.'],
-['Conceptos fundamentales','Tríada CIA','En un sistema de notas, solo acceden personas autorizadas, no se permiten cambios indebidos y el servicio está accesible. ¿Qué orden corresponde?', ['Confidencialidad, integridad y disponibilidad.','Integridad, disponibilidad y confidencialidad.','Disponibilidad, confidencialidad e integridad.'], 'Confidencialidad limita quién ve los datos; integridad protege contra alteraciones indebidas; disponibilidad permite acceder al servicio cuando se necesita.'],
-['Conceptos fundamentales','Autenticación y no repudio','¿Cuál distingue correctamente autenticación de no repudio?', ['La autenticación verifica identidad; el no repudio aporta evidencia de autoría u origen.','La autenticación cifra archivos; el no repudio crea copias de seguridad.','Ambos consisten exclusivamente en ingresar una contraseña.'], 'Ingresar con una credencial verifica identidad. Una firma digital validada puede aportar evidencia de autoría e integridad para el no repudio; una contraseña por sí sola no ofrece la misma evidencia.'],
-['Amenazas y ataques','Caso de ransomware','¿Qué ocurrió en el ataque a Change Healthcare de 2024?', ['El acceso con credenciales comprometidas a un portal sin MFA precedió al ransomware y a interrupciones de pagos y reclamos médicos.','Un ataque DDoS solo saturó su página pública y no afectó sus sistemas internos.','Una falla de Wi-Fi doméstico borró sus bases de datos sin intervención de atacantes.'], 'El caso combinó acceso indebido y ransomware. Se interrumpieron servicios de procesamiento de pagos y reclamos; la respuesta incluyó aislar sistemas y reconstruir servicios. No fue simplemente saturación de una web.', 'https://apnews.com/article/9e2fff70ce4f93566043210bdd347a1f'],
-['Amenazas y ataques','DoS y DDoS','¿Por qué suele ser más difícil mitigar un DDoS que un DoS de un solo origen?', ['El tráfico proviene de múltiples orígenes y cuesta bloquearlo sin afectar usuarios legítimos.','Un DDoS siempre roba contraseñas, mientras que un DoS cifra archivos.','Un DDoS solamente funciona en conexiones inalámbricas.'], 'Ambos buscan afectar la disponibilidad. La distribución entre muchas fuentes aumenta la dificultad de filtrar el ataque y puede agotar enlaces o servicios.'],
-['Amenazas y ataques','Campaña de phishing','En la campaña Storm-2372 documentada en 2025, ¿qué engaño usaron los atacantes?', ['Invitaciones falsas a reuniones de Teams para inducir a completar un flujo de autenticación con código de dispositivo.','Actualizaciones físicas de routers entregadas obligatoriamente a todos los usuarios.','Un corte eléctrico que revelaba automáticamente las contraseñas.'], 'El engaño aprovechó una invitación aparentemente legítima para que la víctima autorizara acceso mediante un código. El phishing también puede abusar de flujos reales de inicio de sesión; no siempre usa una página falsa que pide una contraseña.', 'https://www.microsoft.com/en-us/security/blog/2025/02/13/storm-2372-conducts-device-code-phishing-campaign/'],
-['Amenazas y ataques','Man in the Middle','¿Qué escenario puede facilitar un Man in the Middle en una Wi-Fi pública?', ['Conectarse a un punto de acceso falso controlado por un atacante que intermedia el tráfico.','Mantener el sistema y el navegador actualizados.','Usar una red cuyo nombre sea visible, sin ninguna otra condición.'], 'Un punto de acceso falso puede colocar al atacante en el camino de las comunicaciones. TLS correctamente validado protege el contenido cifrado: intermediar no implica descifrarlo. Bettercap es una herramienta usada en auditorías autorizadas de este tipo.', 'https://www.bettercap.org/'],
-['Amenazas y ataques','Sniffing y spoofing','¿Cuál es la diferencia entre sniffing y spoofing?', ['Sniffing captura tráfico; spoofing falsifica una identidad o información de origen.','Sniffing cifra tráfico; spoofing elimina archivos.','Ambos significan bloquear puertos en un firewall.'], 'Capturar paquetes permite observar tráfico, aunque su contenido puede estar cifrado. Suplantar una dirección IP, MAC u otra identidad es spoofing. Son técnicas distintas que pueden combinarse.'],
-['Herramientas y protección','Tipos de firewall','¿Qué aporta cada evolución del firewall?', ['Filtrado: encabezados; stateful: estado de conexiones; NGFW: análisis de aplicaciones y protección avanzada.','Filtrado: aplicaciones; stateful: solo direcciones; NGFW: elimina la necesidad de reglas.','Todos analizan lo mismo y únicamente cambia su velocidad.'], 'El filtrado básico evalúa datos como IP, protocolo y puerto. Stateful considera el contexto de una conexión. NGFW suma funciones como identificación de aplicaciones e inspección avanzada, según configuración y capacidades.'],
-['Herramientas y protección','IDS e IPS','¿Qué diferencia principal existe entre IDS e IPS?', ['El IDS detecta y alerta; un IPS configurado en línea puede bloquear tráfico malicioso.','El IDS cifra contraseñas y el IPS administra el Wi-Fi.','El IDS protege teléfonos y el IPS exclusivamente servidores.'], 'La diferencia está en detectar frente a intervenir para prevenir. Snort y Suricata pueden operar como IDS o IPS según el modo de implementación: no son categorías exclusivas de una marca.'],
-['Herramientas y protección','TLS y HTTPS','¿Qué significa el indicador de conexión segura de un navegador?', ['La conexión usa TLS y el certificado fue aceptado; no garantiza que el sitio sea honesto.','El sitio está libre de estafas porque usa HTTPS.','La página pertenece necesariamente a un organismo oficial.'], 'TLS protege la confidencialidad e integridad de la conexión y permite autenticar al servidor mediante certificados. SSL es su predecesor obsoleto. La forma del indicador varía entre navegadores; una web fraudulenta también puede tener HTTPS.'],
-['Herramientas y protección','VPN','¿Cómo funciona una VPN y cuándo resulta útil?', ['Crea un túnel protegido hacia un servidor o red; sirve para acceder a recursos de una organización a distancia.','Elimina el malware y garantiza anonimato absoluto.','Hace que cualquier página web sea confiable.'], 'La VPN protege el tramo del túnel y puede dar acceso remoto a recursos privados. No reemplaza actualizaciones, HTTPS ni precauciones frente al phishing; el proveedor o la red de destino siguen siendo parte de la confianza.'],
-['Herramientas y protección','Autenticación multifactor','¿Qué combinación es MFA?', ['Una contraseña y un código generado en una aplicación autenticadora de tu dispositivo.','Una contraseña y una pregunta de seguridad.','La misma contraseña ingresada dos veces.'], 'MFA combina factores de categorías distintas: algo que sabés, tenés o sos. Una aplicación autenticadora, una llave física y un código por SMS son posibles segundos factores, aunque no brindan la misma resistencia al phishing. Dos secretos memorizados siguen siendo un solo tipo de factor.'],
-['Diseño de redes seguras','VLANs','¿Qué ventaja ofrece separar una red en VLANs?', ['Separar grupos de dispositivos y aplicar controles al tráfico entre segmentos.','Impedir automáticamente todos los ataques sin configurar reglas.','Reemplazar contraseñas y actualizaciones.'], 'Las VLANs separan dominios de broadcast y facilitan la segmentación. Para limitar acceso entre ellas se requieren ACL o firewalls y una configuración adecuada; la separación por sí sola no resuelve toda la seguridad.'],
-['Diseño de redes seguras','DMZ','¿Por qué una base de datos sensible suele quedar en una red interna y no en la DMZ?', ['La DMZ aloja servicios expuestos; mantener la base en otro segmento restringido reduce su exposición.','La DMZ no admite servidores.','Toda DMZ elimina automáticamente el cifrado de los datos.'], 'Una DMZ separa servicios accesibles desde redes externas. Si un servidor público resulta comprometido, los controles hacia la red de datos ayudan a limitar el daño. Solo deben permitirse las conexiones necesarias.'],
-['Diseño de redes seguras','VLAN hopping','¿Qué es VLAN hopping y cómo se reduce su riesgo?', ['Es intentar acceder a otra VLAN; se mitiga configurando puertos de acceso, troncales y VLAN nativa de forma segura.','Es cambiar el nombre de una VLAN; se evita ocultando el SSID.','Es saturar internet; se evita contratando más velocidad.'], 'Incluye técnicas como suplantar un switch o aprovechar doble etiquetado. Se recomienda evitar negociación automática de troncales donde no corresponde, limitar VLANs permitidas y no usar la VLAN nativa para usuarios.'],
-['Gestión y normativa','NIST CSF','¿Qué establece el NIST Cybersecurity Framework 2.0?', ['Un marco para gestionar riesgos mediante Gobernar, Identificar, Proteger, Detectar, Responder y Recuperar.','Una garantía de que las organizaciones no sufrirán ataques.','Una ley que reemplaza todas las normas de cada país.'], 'El CSF organiza resultados y actividades de gestión de riesgos. No es una garantía ni sustituye la legislación. La versión 2.0 incluye Gobernar como una de sus seis funciones.', 'https://www.nist.gov/news-events/news/2024/02/nist-releases-version-20-landmark-cybersecurity-framework'],
-['Gestión y normativa','CSIRT / CERT en Argentina','¿Qué es CERT.ar?', ['El equipo nacional de respuesta que coordina y apoya la gestión de incidentes informáticos.','Un antivirus obligatorio para cualquier computadora argentina.','Una empresa que vende certificados para sitios web.'], 'Un CSIRT/CERT es un equipo de respuesta a incidentes. CERT.ar trabaja en la coordinación de incidentes, prevención y protección del Sector Público Nacional y de infraestructuras críticas de información.', 'https://www.argentina.gob.ar/ciberseguridad/certar/funciones'],
-['Gestión y normativa','Evidencia y cadena de custodia','¿Por qué se evalúa un equipo comprometido antes de apagarlo?', ['Podrían perderse datos volátiles; además, se debe documentar quién recoge, conserva y analiza la evidencia.','Apagarlo borra siempre todos los datos del disco.','Mantenerlo encendido garantiza que el atacante deje de actuar.'], 'La RAM y conexiones activas pueden aportar evidencia que se pierde al apagar. La cadena de custodia registra el manejo de esa evidencia para preservar su trazabilidad e integridad. La decisión depende de la contención y del protocolo: no significa dejar el equipo conectado sin control.'],
-['Gestión y normativa','Legislación argentina','¿Qué asociación entre normas y contenidos es correcta?', ['Ley 25.326: protección de datos personales; Ley 26.388: incorporación y modificación de delitos informáticos en el Código Penal.','Ley 25.326: velocidades de Wi-Fi; Ley 26.388: nombres de VLANs.','Ambas son recomendaciones comerciales sin carácter legal.'], 'La Ley 25.326 regula la protección de datos personales. La Ley 26.388 reformó el Código Penal para contemplar conductas vinculadas con sistemas y datos informáticos. Son normas legales, distintas de marcos voluntarios como NIST.', 'https://www.argentina.gob.ar/jefatura/innovacion-publica/direccion-nacional-ciberseguridad/normativa'],
-['Gestión y normativa','Casos de empresas argentinas','¿Qué afirmación corresponde a incidentes informados por Telecom y Mercado Libre?', ['Telecom informó contención de un ciberataque en 2020; Mercado Libre comunicó acceso no autorizado a datos de unos 300.000 usuarios en 2022.','Ambas empresas afirmaron que HTTPS hace imposible cualquier ataque.','Mercado Libre informó que el incidente de 2022 consistió únicamente en una falla eléctrica.'], 'Telecom describió la contención en su reporte 2020. Mercado Libre comunicó el acceso a datos y la activación de protocolos; su análisis inicial no encontró evidencia de obtención de contraseñas ni información de tarjetas. Esa declaración inicial no permite afirmar que nunca existieron otros impactos.', 'https://www.mercadolibre.com.mx/institucional/comunicamos/noticias/comunicado-mercado-libre-seguridad'],
-['Configuración segura','Seguridad de una red','¿Qué conjunto de acciones mejora la seguridad de una red?', ['Inventariar equipos, segmentar, restringir accesos, actualizar, configurar firewall y revisar registros.','Permitir toda comunicación y conservar contraseñas predeterminadas.','Instalar un antivirus en un equipo y omitir los demás controles.'], 'La seguridad se construye con varias medidas: conocer los activos, aplicar mínimo privilegio, proteger la administración, actualizar y monitorear. También conviene disponer de copias de seguridad probadas y un plan de respuesta.'],
-['Configuración segura','Wi-Fi doméstica','¿Qué configuración protege mejor una conexión Wi-Fi doméstica?', ['WPA3 o WPA2-AES, contraseñas robustas, firmware actualizado y WPS desactivado si no se necesita.','Ocultar el nombre de la red y dejarla sin contraseña.','Usar WEP y conservar la contraseña de administración original.'], 'WPA3 o WPA2 con AES protegen la conexión inalámbrica. También hay que cambiar las credenciales del administrador y actualizar el router. Ocultar el SSID no sustituye el cifrado, y WEP es inseguro.']
-].map((q,i)=>({id:i+1,group:q[0],topic:q[1],question:q[2],options:q[3],explanation:q[4],source:q[5]}));
-
-const KEY='redes-examen-v1';
+  {
+    "id": 1,
+    "group": "Conceptos fundamentales",
+    "topic": "Seguridad en redes",
+    "question": "¿Qué busca la seguridad en redes y por qué resulta cada vez más relevante?",
+    "options": [
+      "Proteger datos, dispositivos y comunicaciones ante riesgos que crecen con la conectividad.",
+      "Garantizar que las comunicaciones nunca se interrumpan, sin considerar quién accede a los datos.",
+      "Evitar accesos externos mediante contraseñas, dejando fuera del alcance las amenazas internas."
+    ],
+    "explanation": "La seguridad protege confidencialidad, integridad y disponibilidad. No se limita a continuidad del servicio ni a amenazas externas; también considera errores, permisos y riesgos internos."
+  },
+  {
+    "id": 2,
+    "group": "Conceptos fundamentales",
+    "topic": "Tríada CIA",
+    "question": "En un sistema de notas, solo acceden personas autorizadas, no se permiten cambios indebidos y el servicio está accesible. ¿Qué orden corresponde?",
+    "options": [
+      "Confidencialidad, integridad y disponibilidad.",
+      "Integridad, confidencialidad y disponibilidad.",
+      "Confidencialidad, disponibilidad e integridad."
+    ],
+    "explanation": "Restringir quién accede corresponde a confidencialidad; impedir cambios indebidos, a integridad; mantener el servicio accesible, a disponibilidad. El orden de los ejemplos es importante."
+  },
+  {
+    "id": 3,
+    "group": "Conceptos fundamentales",
+    "topic": "Autenticación y no repudio",
+    "question": "¿Cuál distingue correctamente autenticación de no repudio?",
+    "options": [
+      "La autenticación verifica identidad; el no repudio aporta evidencia de autoría u origen.",
+      "La autenticación comprueba que un archivo no cambió; el no repudio comprueba quién inicia sesión.",
+      "La autenticación y el no repudio se obtienen siempre que el usuario ingresa una contraseña válida."
+    ],
+    "explanation": "Autenticar es verificar identidad. El no repudio requiere evidencia de origen o autoría, por ejemplo una firma digital validada. Comprobar que un archivo no cambió se relaciona con integridad; una contraseña por sí sola no garantiza no repudio."
+  },
+  {
+    "id": 4,
+    "group": "Amenazas y ataques",
+    "topic": "Caso de ransomware",
+    "question": "¿Qué ocurrió en el ataque a Change Healthcare de 2024?",
+    "options": [
+      "El acceso con credenciales comprometidas a un portal sin MFA precedió al ransomware y a interrupciones de pagos y reclamos médicos.",
+      "Un DDoS contra el portal público saturó los enlaces, sin acceso indebido ni cifrado de sistemas internos.",
+      "Un portal con MFA resistió el acceso remoto y el incidente quedó limitado a correos de phishing sin impacto operativo."
+    ],
+    "explanation": "El acceso se produjo con credenciales comprometidas en un portal Citrix sin MFA. Luego hubo movimiento lateral, robo de datos y ransomware. Se afectó el procesamiento de pagos y reclamos; no fue solamente saturación externa ni una campaña sin consecuencias.",
+    "source": "https://apnews.com/article/9e2fff70ce4f93566043210bdd347a1f"
+  },
+  {
+    "id": 5,
+    "group": "Amenazas y ataques",
+    "topic": "DoS y DDoS",
+    "question": "¿Por qué suele ser más difícil mitigar un DDoS que un DoS de un solo origen?",
+    "options": [
+      "El tráfico proviene de múltiples orígenes y cuesta bloquearlo sin afectar usuarios legítimos.",
+      "Porque un DDoS cifra las solicitudes y un DoS siempre utiliza solicitudes sin cifrar.",
+      "Porque todo DDoS explota una vulnerabilidad desconocida, mientras que un DoS solo usa fallas corregidas."
+    ],
+    "explanation": "La diferencia clave es la distribución entre múltiples fuentes. Eso dificulta filtrar y puede agotar recursos. Ni el cifrado del tráfico ni la existencia de una vulnerabilidad desconocida definen un DDoS."
+  },
+  {
+    "id": 6,
+    "group": "Amenazas y ataques",
+    "topic": "Campaña de phishing",
+    "question": "En la campaña Storm-2372 documentada en 2025, ¿qué engaño usaron los atacantes?",
+    "options": [
+      "Invitaciones falsas a reuniones de Teams para inducir a completar un flujo de autenticación con código de dispositivo.",
+      "Invitaciones falsas a Teams que instalaban ransomware por el solo hecho de leer el asunto del correo.",
+      "Mensajes que pedían cambiar el DNS del router para obtener acceso directo a las cuentas de Microsoft."
+    ],
+    "explanation": "La campaña usaba invitaciones falsas y códigos de dispositivo para conseguir tokens de acceso mediante la interacción de la víctima. No dependía de cambiar el DNS ni de ejecutar ransomware al leer el asunto.",
+    "source": "https://www.microsoft.com/en-us/security/blog/2025/02/13/storm-2372-conducts-device-code-phishing-campaign/"
+  },
+  {
+    "id": 7,
+    "group": "Amenazas y ataques",
+    "topic": "Man in the Middle",
+    "question": "¿Qué escenario puede facilitar un Man in the Middle en una Wi-Fi pública?",
+    "options": [
+      "Conectarse a un punto de acceso falso controlado por un atacante que intermedia el tráfico.",
+      "Conectarse a un punto de acceso legítimo que aísla clientes y valida correctamente las conexiones HTTPS.",
+      "Compartir el mismo nombre de red con un atacante, aunque no exista ningún mecanismo que le permita intermediar el tráfico."
+    ],
+    "explanation": "El punto de acceso falso controlado por el atacante puede situarlo entre la víctima y la red. Compartir un SSID no basta por sí solo. TLS correctamente validado protege el contenido cifrado incluso si alguien intermedia la conexión. Bettercap permite estudiar estos escenarios en auditorías autorizadas.",
+    "source": "https://www.bettercap.org/"
+  },
+  {
+    "id": 8,
+    "group": "Amenazas y ataques",
+    "topic": "Sniffing y spoofing",
+    "question": "¿Cuál es la diferencia entre sniffing y spoofing?",
+    "options": [
+      "Sniffing captura tráfico; spoofing falsifica una identidad o información de origen.",
+      "Sniffing modifica direcciones de origen; spoofing captura paquetes sin alterar identidades.",
+      "Sniffing solo captura tráfico cifrado; spoofing solo captura tráfico sin cifrar."
+    ],
+    "explanation": "Sniffing consiste en capturar tráfico. Spoofing falsifica una identidad u origen, como una dirección IP o MAC. La distinción no depende de si el tráfico está cifrado; las técnicas pueden combinarse."
+  },
+  {
+    "id": 9,
+    "group": "Herramientas y protección",
+    "topic": "Tipos de firewall",
+    "question": "¿Qué aporta cada evolución del firewall?",
+    "options": [
+      "Filtrado: encabezados; stateful: estado de conexiones; NGFW: análisis de aplicaciones y protección avanzada.",
+      "Filtrado: estado de conexiones; stateful: solo direcciones IP; NGFW: únicamente puertos TCP.",
+      "Filtrado: encabezados; stateful: cifrado obligatorio; NGFW: eliminación de las reglas de acceso."
+    ],
+    "explanation": "Un filtro básico revisa encabezados; stateful agrega contexto de las conexiones; un NGFW incorpora funciones como reconocimiento de aplicaciones e inspección avanzada. Stateful no implica cifrar y un NGFW sigue necesitando políticas."
+  },
+  {
+    "id": 10,
+    "group": "Herramientas y protección",
+    "topic": "IDS e IPS",
+    "question": "¿Qué diferencia principal existe entre IDS e IPS?",
+    "options": [
+      "El IDS detecta y alerta; un IPS configurado en línea puede bloquear tráfico malicioso.",
+      "El IDS bloquea tráfico en línea; el IPS únicamente registra eventos para revisarlos después.",
+      "El IDS analiza solo tráfico externo; el IPS analiza solo tráfico de la red interna."
+    ],
+    "explanation": "La diferencia es detectar y alertar frente a poder intervenir para impedir tráfico. No se define por si el tráfico es interno o externo. Snort y Suricata pueden funcionar como IDS o IPS según la configuración."
+  },
+  {
+    "id": 11,
+    "group": "Herramientas y protección",
+    "topic": "TLS y HTTPS",
+    "question": "¿Qué significa el indicador de conexión segura de un navegador?",
+    "options": [
+      "La conexión usa TLS y el certificado fue aceptado; no garantiza que el sitio sea honesto.",
+      "La conexión usa TLS y, por eso, el propietario y todos los contenidos del sitio fueron verificados como confiables.",
+      "El certificado aceptado garantiza que la página no puede alojar phishing ni descargar archivos maliciosos."
+    ],
+    "explanation": "HTTPS protege la comunicación y permite autenticar al servidor mediante un certificado aceptado. No certifica la honestidad del contenido: una página de phishing también puede usar HTTPS. SSL es obsoleto y el indicador visual varía entre navegadores."
+  },
+  {
+    "id": 12,
+    "group": "Herramientas y protección",
+    "topic": "VPN",
+    "question": "¿Cómo funciona una VPN y cuándo resulta útil?",
+    "options": [
+      "Crea un túnel protegido hacia un servidor o red; sirve para acceder a recursos de una organización a distancia.",
+      "Cifra cualquier comunicación hasta su destino final, incluso después de salir del servidor VPN hacia una web HTTP.",
+      "Oculta la IP frente a cualquier participante y evita que el proveedor VPN pueda observar información de la conexión."
+    ],
+    "explanation": "Una VPN de acceso remoto segura protege el tramo del túnel. Ese cifrado no se extiende automáticamente al tramo posterior al servidor VPN: HTTPS sigue siendo importante. El proveedor VPN también forma parte de la confianza; no hay anonimato absoluto."
+  },
+  {
+    "id": 13,
+    "group": "Herramientas y protección",
+    "topic": "Autenticación multifactor",
+    "question": "¿Qué combinación es MFA?",
+    "options": [
+      "Una contraseña y un código generado en una aplicación autenticadora de tu dispositivo.",
+      "Una contraseña y una respuesta secreta que el usuario recuerda.",
+      "Dos contraseñas diferentes ingresadas en pantallas consecutivas."
+    ],
+    "explanation": "MFA combina categorías distintas: conocimiento, posesión o inherencia. La contraseña es conocimiento y el código del autenticador acredita posesión. Dos contraseñas o una pregunta secreta siguen siendo factores de conocimiento."
+  },
+  {
+    "id": 14,
+    "group": "Diseño de redes seguras",
+    "topic": "VLANs",
+    "question": "¿Qué ventaja ofrece separar una red en VLANs?",
+    "options": [
+      "Separar grupos de dispositivos y aplicar controles al tráfico entre segmentos.",
+      "Impedir cualquier acceso entre grupos aunque el enrutamiento permita todo el tráfico entre VLANs.",
+      "Cifrar automáticamente las tramas que circulan entre los dispositivos de una misma VLAN."
+    ],
+    "explanation": "Una VLAN separa grupos lógicamente y dominios de broadcast. Para limitar tráfico entre VLANs se aplican ACL o firewalls; la VLAN no cifra por sí sola ni impide comunicaciones que el enrutamiento permite."
+  },
+  {
+    "id": 15,
+    "group": "Diseño de redes seguras",
+    "topic": "DMZ",
+    "question": "¿Por qué una base de datos sensible suele quedar en una red interna y no en la DMZ?",
+    "options": [
+      "La DMZ aloja servicios expuestos; mantener la base en otro segmento restringido reduce su exposición.",
+      "La DMZ cifra automáticamente las bases de datos, pero no permite que las aplicaciones accedan a ellas.",
+      "La DMZ debe contener todos los datos sensibles porque está exenta de ataques procedentes de Internet."
+    ],
+    "explanation": "La DMZ aloja servicios expuestos y usa controles hacia otras redes. Una base sensible en un segmento interno más restringido reduce la exposición si se compromete un servicio público. La DMZ no es inmune a ataques ni cifra automáticamente."
+  },
+  {
+    "id": 16,
+    "group": "Diseño de redes seguras",
+    "topic": "VLAN hopping",
+    "question": "¿Qué es VLAN hopping y cómo se reduce su riesgo?",
+    "options": [
+      "Es intentar acceder a otra VLAN; se mitiga configurando puertos de acceso, troncales y VLAN nativa de forma segura.",
+      "Es el enrutamiento autorizado entre VLANs; se evita desactivando todas las puertas de enlace.",
+      "Es capturar tráfico Wi-Fi; se evita cambiando únicamente la contraseña inalámbrica."
+    ],
+    "explanation": "VLAN hopping busca cruzar la separación de VLANs sin autorización. Puede aprovechar negociación de troncales o doble etiquetado. Se mitiga configurando puertos de acceso, troncales y VLAN nativa; no equivale al enrutamiento autorizado ni a un problema exclusivo de Wi-Fi."
+  },
+  {
+    "id": 17,
+    "group": "Gestión y normativa",
+    "topic": "NIST CSF",
+    "question": "¿Qué establece el NIST Cybersecurity Framework 2.0?",
+    "options": [
+      "Un marco para gestionar riesgos mediante Gobernar, Identificar, Proteger, Detectar, Responder y Recuperar.",
+      "Un listado obligatorio de marcas y dispositivos que reemplaza la evaluación de riesgos de cada organización.",
+      "Un esquema centrado solo en prevenir ataques, que excluye la respuesta y la recuperación."
+    ],
+    "explanation": "NIST CSF 2.0 organiza la gestión de riesgos en seis funciones, incluida Gobernar. No prescribe marcas ni garantiza inmunidad. Responder y Recuperar forman parte explícita del marco.",
+    "source": "https://www.nist.gov/news-events/news/2024/02/nist-releases-version-20-landmark-cybersecurity-framework"
+  },
+  {
+    "id": 18,
+    "group": "Gestión y normativa",
+    "topic": "CSIRT / CERT en Argentina",
+    "question": "¿Qué es CERT.ar?",
+    "options": [
+      "El equipo nacional de respuesta que coordina y apoya la gestión de incidentes informáticos.",
+      "Una autoridad que emite todos los certificados TLS de los sitios argentinos.",
+      "Un organismo cuya única función es imponer sanciones penales a quienes cometen delitos informáticos."
+    ],
+    "explanation": "CERT.ar es el equipo nacional de respuesta a incidentes. Coordina, asesora y contribuye a prevención, detección y recuperación. No es una autoridad certificadora universal ni un tribunal penal.",
+    "source": "https://www.argentina.gob.ar/ciberseguridad/certar/funciones"
+  },
+  {
+    "id": 19,
+    "group": "Gestión y normativa",
+    "topic": "Evidencia y cadena de custodia",
+    "question": "¿Por qué se evalúa un equipo comprometido antes de apagarlo?",
+    "options": [
+      "Podrían perderse datos volátiles; además, se debe documentar quién recoge, conserva y analiza la evidencia.",
+      "Porque apagarlo destruye necesariamente todos los archivos almacenados en discos y copias de seguridad.",
+      "Porque la cadena de custodia exige mantener todo equipo conectado a Internet durante la investigación."
+    ],
+    "explanation": "Apagar puede perder RAM y otros datos volátiles. La cadena de custodia documenta el manejo de la evidencia, pero no obliga a mantener conexión a Internet. Se evalúan contención y preservación según el procedimiento; no es una regla de nunca apagar."
+  },
+  {
+    "id": 20,
+    "group": "Gestión y normativa",
+    "topic": "Legislación argentina",
+    "question": "¿Qué asociación entre normas y contenidos es correcta?",
+    "options": [
+      "Ley 25.326: protección de datos personales; Ley 26.388: incorporación y modificación de delitos informáticos en el Código Penal.",
+      "Ley 25.326: firma digital; Ley 26.388: protección general de datos personales.",
+      "Ley 25.326: protección de datos personales; Ley 26.388: certificación obligatoria ISO 27001 de todas las empresas."
+    ],
+    "explanation": "La Ley 25.326 trata datos personales. La Ley 26.388 reformó el Código Penal en materia de delitos informáticos; no impone ISO 27001. La ley argentina de firma digital es la 25.506.",
+    "source": "https://www.argentina.gob.ar/jefatura/innovacion-publica/direccion-nacional-ciberseguridad/normativa"
+  },
+  {
+    "id": 21,
+    "group": "Gestión y normativa",
+    "topic": "Casos de empresas argentinas",
+    "question": "¿Qué afirmación corresponde a incidentes informados por Telecom y Mercado Libre?",
+    "options": [
+      "Telecom informó contención de un ciberataque en 2020; Mercado Libre comunicó acceso no autorizado a datos de unos 300.000 usuarios en 2022.",
+      "Telecom informó pérdida total permanente de su red en 2020 y Mercado Libre confirmó robo de todas las contraseñas en 2022.",
+      "Mercado Libre informó afectación de unos 300.000 usuarios en 2020 y Telecom reportó ese mismo incidente en 2022."
+    ],
+    "explanation": "Telecom informó contención de un intento de ciberataque en 2020. Mercado Libre comunicó acceso a datos de unos 300.000 usuarios en 2022; su análisis inicial no encontró evidencia de obtención de contraseñas ni datos de tarjetas. No deben invertirse las fechas ni presentar conclusiones iniciales como definitivas.",
+    "source": "https://www.mercadolibre.com.mx/institucional/comunicamos/noticias/comunicado-mercado-libre-seguridad"
+  },
+  {
+    "id": 22,
+    "group": "Configuración segura",
+    "topic": "Seguridad de una red",
+    "question": "¿Qué conjunto de acciones mejora la seguridad de una red?",
+    "options": [
+      "Inventariar equipos, segmentar, restringir accesos, actualizar, configurar firewall y revisar registros.",
+      "Segmentar la red, pero permitir todas las comunicaciones entre segmentos y usar una cuenta administrativa compartida.",
+      "Configurar un firewall una vez y suspender actualizaciones y monitoreo para evitar cambios en la red."
+    ],
+    "explanation": "La protección requiere conocer los equipos, aplicar mínimo privilegio, actualizar y monitorear. Segmentar sin controles de acceso limita sus beneficios. Un firewall no sustituye mantenimiento, cuentas individuales, registros ni copias de seguridad probadas."
+  },
+  {
+    "id": 23,
+    "group": "Configuración segura",
+    "topic": "Wi-Fi doméstica",
+    "question": "¿Qué configuración protege mejor una conexión Wi-Fi doméstica?",
+    "options": [
+      "WPA3 o WPA2-AES, contraseñas robustas, firmware actualizado y WPS desactivado si no se necesita.",
+      "Ocultar el SSID, mantener WPS activo y confiar en el filtrado MAC como reemplazo del cifrado.",
+      "Usar WPA2 con TKIP y conservar las credenciales de administración originales para asegurar compatibilidad."
+    ],
+    "explanation": "La opción adecuada usa WPA3 o WPA2 con AES, contraseñas robustas y actualizaciones. Ocultar el SSID o filtrar MAC no reemplaza el cifrado; TKIP es una opción antigua e insegura. También deben cambiarse las credenciales del administrador."
+  }
+];
+const KEY='redes-examen-opciones-v2';
 const app=document.querySelector('#app');
 const dialog=document.querySelector('#confirm');
 const shuffle=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
@@ -60,10 +319,10 @@ const QUESTIONS = [
     "question": "¿Cuál es el objetivo de la confidencialidad?",
     "options": [
       "Que solo accedan personas autorizadas",
-      "Que los datos estén siempre disponibles",
-      "Que los equipos tengan más velocidad"
+      "Que las personas autorizadas puedan acceder al servicio cuando lo necesitan",
+      "Que los datos no sufran modificaciones no autorizadas"
     ],
-    "explanation": "La confidencialidad limita el acceso a quienes tienen autorización. Que los datos estén accesibles cuando se necesitan corresponde a disponibilidad, no a confidencialidad."
+    "explanation": "Confidencialidad se refiere a quién puede acceder a la información. Evitar cambios indebidos es integridad; mantener el acceso cuando se necesita es disponibilidad."
   },
   {
     "id": 2,
@@ -73,9 +332,9 @@ const QUESTIONS = [
     "options": [
       "Integridad",
       "Disponibilidad",
-      "Autenticación"
+      "Confidencialidad"
     ],
-    "explanation": "Cambiar un dato sin permiso afecta su integridad. Disponibilidad se refiere a poder acceder al servicio; autenticación consiste en comprobar una identidad."
+    "explanation": "Modificar una nota sin permiso afecta integridad. La confidencialidad se relaciona con acceso o divulgación, y disponibilidad con el acceso al servicio. En este caso lo que cambia es el contenido."
   },
   {
     "id": 3,
@@ -84,10 +343,10 @@ const QUESTIONS = [
     "question": "¿Qué describe mejor un ataque DDoS?",
     "options": [
       "Muchos dispositivos saturan un servicio",
-      "Una única PC cifra archivos",
-      "Un usuario crea una contraseña"
+      "Un equipo satura un servicio desde un único origen",
+      "Un programa cifra los archivos y solicita un rescate"
     ],
-    "explanation": "Un DDoS utiliza múltiples fuentes para saturar un servicio y afectar su disponibilidad. Cifrar archivos es una conducta asociada al ransomware."
+    "explanation": "DDoS es denegación de servicio distribuida: intervienen múltiples fuentes. Un ataque desde una fuente no tiene ese componente distribuido; cifrado con rescate describe ransomware."
   },
   {
     "id": 4,
@@ -96,10 +355,10 @@ const QUESTIONS = [
     "question": "Un mensaje falso del correo que pide confirmar la clave es:",
     "options": [
       "Phishing",
-      "VLAN",
-      "VPN"
+      "Un ataque DDoS para impedir el acceso al correo",
+      "Un proceso de autenticación legítimo, porque solicita una clave"
     ],
-    "explanation": "El phishing suplanta una identidad para engañar y obtener información o acciones de la víctima. VLAN y VPN son tecnologías de red, no ese tipo de engaño."
+    "explanation": "Un mensaje falso que busca obtener una clave es phishing. Solicitar credenciales no demuestra legitimidad. Un DDoS busca afectar la disponibilidad, no define este engaño."
   },
   {
     "id": 5,
@@ -108,10 +367,10 @@ const QUESTIONS = [
     "question": "¿Cuál es la diferencia central entre sniffing y spoofing?",
     "options": [
       "Sniffing captura tráfico; spoofing falsifica identidad",
-      "Son exactamente iguales",
-      "Spoofing solo sirve para cifrar"
+      "Sniffing falsifica identidades; spoofing captura tráfico",
+      "Sniffing echa usuarios de la red; spoofing cifra sus paquetes"
     ],
-    "explanation": "Sniffing significa capturar tráfico; spoofing significa suplantar una identidad o un origen. Pueden combinarse, pero no son lo mismo ni equivalen a cifrar."
+    "explanation": "Capturar tráfico es sniffing; falsificar un origen o identidad es spoofing. Son técnicas distintas y pueden combinarse; ninguna se define como cifrado de paquetes."
   },
   {
     "id": 6,
@@ -120,10 +379,10 @@ const QUESTIONS = [
     "question": "¿Qué hace principalmente un IDS?",
     "options": [
       "Detecta y alerta",
-      "Siempre bloquea automáticamente",
-      "Asigna direcciones IP"
+      "Bloquea en línea todo tráfico que una regla identifica como peligroso",
+      "Asigna automáticamente IP y gateway a los clientes"
     ],
-    "explanation": "Un IDS identifica actividad sospechosa y genera alertas. El bloqueo en línea corresponde al papel de un IPS. Asignar direcciones IP automáticamente es una función de DHCP."
+    "explanation": "El papel principal de un IDS es detectar y alertar. El bloqueo en línea caracteriza a un IPS; asignar configuración de red automáticamente corresponde a DHCP."
   },
   {
     "id": 7,
@@ -132,10 +391,10 @@ const QUESTIONS = [
     "question": "¿Qué puede hacer un IPS?",
     "options": [
       "Detectar y bloquear tráfico malicioso",
-      "Solo imprimir informes",
-      "Reemplazar todos los switches"
+      "Solo registra alertas sin posibilidad de intervenir sobre el tráfico",
+      "Solo controla qué usuario puede iniciar sesión en un equipo"
     ],
-    "explanation": "Un IPS puede detectar y bloquear tráfico malicioso según sus reglas. No sustituye a los switches, que conectan equipos y reenvían tramas."
+    "explanation": "Un IPS puede detectar y bloquear tráfico según las reglas. Registrar sin bloquear corresponde al uso típico de IDS; autenticar usuarios es una función diferente."
   },
   {
     "id": 8,
@@ -144,10 +403,10 @@ const QUESTIONS = [
     "question": "¿Qué aporta un firewall stateful?",
     "options": [
       "Recuerda el estado de conexiones",
-      "No revisa ningún paquete",
-      "Solo conecta Wi-Fi"
+      "Analiza cada paquete aislado sin conservar información de la sesión",
+      "Cifra automáticamente el contenido de todas las conexiones permitidas"
     ],
-    "explanation": "Un firewall stateful mantiene información del estado de las conexiones para evaluar el tráfico en contexto. No se limita a brindar acceso Wi-Fi ni deja de inspeccionar paquetes."
+    "explanation": "Stateful mantiene estado de las conexiones y usa ese contexto al filtrar. Un filtro sin estado analiza paquetes sin ese seguimiento. El filtrado stateful no implica cifrar."
   },
   {
     "id": 9,
@@ -156,10 +415,10 @@ const QUESTIONS = [
     "question": "¿Qué significa HTTPS?",
     "options": [
       "Comunicación HTTP protegida con TLS",
-      "Garantía de que la página es honesta",
-      "Una red local"
+      "HTTP con contenido aprobado como seguro por el navegador",
+      "HTTP que oculta por completo la identidad del cliente y del servidor"
     ],
-    "explanation": "HTTPS es HTTP protegido mediante TLS. Protege la comunicación, pero no garantiza que el contenido o la persona que administra la página sean confiables."
+    "explanation": "HTTPS es HTTP protegido con TLS. Protege la comunicación, pero no aprueba el contenido ni garantiza anonimato total. Un sitio fraudulento puede utilizar HTTPS."
   },
   {
     "id": 10,
@@ -168,10 +427,10 @@ const QUESTIONS = [
     "question": "¿Qué agrega MFA?",
     "options": [
       "Más de un factor de autenticación",
-      "Más cables a la red",
-      "Una segunda dirección IP"
+      "Dos contraseñas diferentes, aunque ambas sean del mismo tipo de factor",
+      "Un código que reemplaza la contraseña y se usa como único factor"
     ],
-    "explanation": "MFA combina factores de categorías diferentes: algo que sabés, algo que tenés o algo que sos. Por ejemplo, una contraseña y una llave física. No agrega cables ni direcciones IP."
+    "explanation": "MFA combina factores de categorías diferentes: algo que sabés, tenés o sos. Dos contraseñas siguen siendo conocimiento; reemplazar una credencial por otra única no agrega un segundo factor."
   },
   {
     "id": 11,
@@ -180,10 +439,10 @@ const QUESTIONS = [
     "question": "¿Para qué sirve una VLAN?",
     "options": [
       "Separar lógicamente grupos dentro de una red",
-      "Aumentar físicamente el largo de un cable",
-      "Reemplazar el router siempre"
+      "Cifrar automáticamente todo el tráfico de una LAN",
+      "Comunicar subredes diferentes sin ningún dispositivo o función de enrutamiento"
     ],
-    "explanation": "Una VLAN separa lógicamente grupos de dispositivos y dominios de difusión. La comunicación entre VLANs requiere enrutamiento y los controles correspondientes."
+    "explanation": "Una VLAN crea separación lógica y dominios de broadcast distintos. No cifra por sí sola. Para comunicar VLANs se necesita enrutamiento y los controles correspondientes."
   },
   {
     "id": 12,
@@ -192,10 +451,10 @@ const QUESTIONS = [
     "question": "¿Qué es una DMZ?",
     "options": [
       "Un área aislada para servicios accesibles desde fuera",
-      "Una contraseña",
-      "Un tipo de cable de consola"
+      "Un segmento interno reservado para bases sensibles sin ningún servicio accesible desde fuera",
+      "Un túnel cifrado entre un equipo remoto y la red de la empresa"
     ],
-    "explanation": "La DMZ es un segmento separado para servicios expuestos a redes externas, como un servidor web. Se aplican reglas para limitar el acceso hacia la red interna."
+    "explanation": "La DMZ es un segmento separado para servicios expuestos a redes externas. No es una VPN ni el lugar normalmente elegido para alojar directamente las bases de datos más sensibles. Aislada significa acceso controlado, no desconexión absoluta."
   },
   {
     "id": 13,
@@ -204,10 +463,10 @@ const QUESTIONS = [
     "question": "¿Qué es una VPN?",
     "options": [
       "Un túnel de comunicación cifrado",
-      "Un ataque que bloquea una web",
-      "Una impresora"
+      "Una red lógica que separa puertos de un switch sin crear un túnel hacia otra red",
+      "Un protocolo que traduce nombres de dominio a direcciones IP"
     ],
-    "explanation": "Una VPN crea un túnel protegido hacia un servidor o una red. No es un ataque ni un dispositivo de impresión y no vuelve confiable cualquier sitio."
+    "explanation": "En el contexto de esta guía se estudian VPN de acceso remoto seguras, que crean túneles cifrados. La separación de puertos describe VLAN; la traducción de nombres corresponde a DNS. Como precisión técnica, no toda tecnología denominada VPN incorpora cifrado por sí misma."
   },
   {
     "id": 14,
@@ -216,10 +475,10 @@ const QUESTIONS = [
     "question": "¿Qué busca la cadena de custodia?",
     "options": [
       "Registrar el manejo de la evidencia",
-      "Acelerar el Wi-Fi",
-      "Crear VLANs automáticamente"
+      "Cifrar toda la evidencia para que nadie pueda analizarla",
+      "Modificar los archivos originales para eliminar rastros del atacante"
     ],
-    "explanation": "La cadena de custodia documenta quién tuvo la evidencia, cuándo y cómo la manejó. Ayuda a mantener su trazabilidad e integridad durante una investigación."
+    "explanation": "La cadena de custodia documenta quién tuvo la evidencia y cómo la manejó. No consiste en impedir el análisis ni en modificar los originales para borrar rastros; se busca preservar trazabilidad e integridad."
   },
   {
     "id": 15,
@@ -228,10 +487,10 @@ const QUESTIONS = [
     "question": "¿Qué medida ayuda a proteger el Wi-Fi doméstico?",
     "options": [
       "Usar WPA2/WPA3 y una clave fuerte",
-      "Dejar la clave por defecto",
-      "Compartir la clave públicamente"
+      "Ocultar el SSID y mantener una red abierta sin cifrado",
+      "Permitir únicamente direcciones MAC conocidas sin configurar cifrado"
     ],
-    "explanation": "Usar WPA3 o WPA2 con AES y una contraseña robusta mejora la protección inalámbrica. También conviene cambiar la clave de administración y actualizar el router."
+    "explanation": "WPA3 o WPA2 con AES y una clave fuerte protegen la conexión. Ocultar el nombre de la red y filtrar direcciones MAC no sustituyen el cifrado; las MAC pueden suplantarse."
   },
   {
     "id": 16,
@@ -240,10 +499,10 @@ const QUESTIONS = [
     "question": "¿Qué hace un ransomware?",
     "options": [
       "Cifra o bloquea datos y exige rescate",
-      "Solo mide velocidad",
-      "Conecta dos switches"
+      "Satura un servicio desde muchos dispositivos para impedir su uso",
+      "Captura paquetes de red sin bloquear ni cifrar los archivos"
     ],
-    "explanation": "El ransomware cifra o bloquea datos y exige un rescate. Las copias de seguridad protegidas y probadas ayudan a recuperar la información; pagar no garantiza recuperarla."
+    "explanation": "Ransomware cifra o bloquea datos y exige rescate. Saturar un servicio desde muchas fuentes es DDoS; capturar tráfico es sniffing. Las copias protegidas ayudan a recuperar, y pagar no garantiza recuperación."
   },
   {
     "id": 17,
@@ -252,10 +511,10 @@ const QUESTIONS = [
     "question": "¿Cuál es una función del CSIRT/CERT?",
     "options": [
       "Responder y ayudar a gestionar incidentes",
-      "Fabricar cables",
-      "Cambiar las pantallas de las PCs"
+      "Emitir los certificados TLS de todos los sitios de Internet",
+      "Asignar direcciones IP automáticamente a los usuarios de una LAN"
     ],
-    "explanation": "Un CSIRT/CERT es un equipo de respuesta a incidentes: ayuda a prevenir, analizar, coordinar y gestionar problemas de seguridad. No se dedica a fabricar cables o pantallas."
+    "explanation": "Un CSIRT/CERT ayuda a prevenir, analizar y responder a incidentes. La emisión de certificados corresponde a autoridades certificadoras y la asignación automática de IP a DHCP."
   },
   {
     "id": 18,
@@ -264,10 +523,10 @@ const QUESTIONS = [
     "question": "¿Cuál es una buena reacción ante un correo sospechoso?",
     "options": [
       "Verificar el remitente y entrar al sitio oficial por separado",
-      "Abrir todos los enlaces",
-      "Enviar la contraseña para comprobar"
+      "Abrir el enlace y confiar en el sitio si muestra HTTPS",
+      "Responder al mismo mensaje para pedir que el remitente confirme su identidad"
     ],
-    "explanation": "Verificá el remitente y accedé al sitio oficial por una vía independiente, sin usar los enlaces sospechosos. El nombre visible del remitente por sí solo no demuestra autenticidad."
+    "explanation": "Conviene verificar por una vía independiente y entrar al sitio oficial sin usar el enlace sospechoso. HTTPS no prueba honestidad; responder al mismo remitente puede poner la verificación en manos del atacante."
   },
   {
     "id": 19,
@@ -276,10 +535,10 @@ const QUESTIONS = [
     "question": "¿Qué dispositivo conecta normalmente varias PCs dentro de una LAN?",
     "options": [
       "Switch",
-      "Router",
-      "Modem solamente"
+      "Un repetidor que únicamente regenera la señal física del enlace",
+      "Un módem que únicamente adapta la señal del enlace del proveedor"
     ],
-    "explanation": "Un switch conecta equipos dentro de una LAN y reenvía tramas según direcciones MAC. Un router se utiliza para comunicar redes IP distintas."
+    "explanation": "Normalmente un switch conecta varias PCs de una LAN y reenvía tramas según MAC. Un repetidor regenera señales y un módem adapta el enlace de acceso; esas funciones no sustituyen a la conmutación LAN."
   },
   {
     "id": 20,
@@ -288,10 +547,10 @@ const QUESTIONS = [
     "question": "¿Qué dispositivo permite comunicar redes IP diferentes?",
     "options": [
       "Router",
-      "Impresora",
-      "Cable de consola"
+      "Switch de capa 2 sin funciones de enrutamiento",
+      "Repetidor de red Ethernet"
     ],
-    "explanation": "El router reenvía paquetes entre redes IP. Una impresora es un dispositivo final y un cable de consola se usa para administración, no para enrutar."
+    "explanation": "El router reenvía paquetes entre redes IP. Un switch de capa 2 y un repetidor no realizan ese enrutamiento. Un switch de capa 3 sí puede hacerlo, pero no es el distractor presentado."
   },
   {
     "id": 21,
@@ -300,10 +559,10 @@ const QUESTIONS = [
     "question": "¿Qué cable se usa típicamente entre PC y switch?",
     "options": [
       "Cobre directo",
-      "Serial DCE",
-      "Consola"
+      "Cable de consola conectado al puerto Console del switch",
+      "Cable serial DCE conectado a una interfaz WAN"
     ],
-    "explanation": "La conexión clásica PC–switch usa cobre directo. Un cable de consola sirve para administrar el equipo; un serial DCE se utiliza en determinadas prácticas WAN."
+    "explanation": "Para tráfico Ethernet entre PC y switch se enseña cobre directo. Consola es para administración y serial DCE para ciertos enlaces WAN. Auto-MDI/MDIX puede admitir más de un tipo de cable Ethernet, pero no convierte consola o serial en conexiones Ethernet LAN."
   },
   {
     "id": 22,
@@ -312,10 +571,10 @@ const QUESTIONS = [
     "question": "¿Qué conexión es típica entre una PC y un switch para administrar el equipo por CLI?",
     "options": [
       "Cable de consola desde la PC al puerto Console del equipo",
-      "Cable de fibra a cualquier puerto",
-      "Cable serial DCE a la impresora"
+      "Cable de consola desde la PC a un puerto FastEthernet del switch",
+      "Cable serial DCE desde la PC al puerto Console del switch"
     ],
-    "explanation": "Para administrar localmente por consola se conecta la PC al puerto Console del switch con un cable de consola. No transporta el tráfico normal de usuarios. También existe administración remota, por ejemplo mediante SSH."
+    "explanation": "La administración local por consola usa el cable y puerto Console correspondientes. Un puerto FastEthernet no reemplaza al de consola y el cable serial DCE de prácticas WAN no es el cable de consola. También existe CLI remota por SSH."
   },
   {
     "id": 23,
@@ -324,10 +583,10 @@ const QUESTIONS = [
     "question": "Una laptop conectada por Wi-Fi suele asociarse a:",
     "options": [
       "Access Point/router inalámbrico",
-      "Cable serial",
-      "Puerto Console"
+      "Un switch de capa 2 sin interfaz ni punto de acceso inalámbrico",
+      "La interfaz serial WAN de un router"
     ],
-    "explanation": "Una laptop Wi-Fi se asocia a un punto de acceso o a la función inalámbrica de un router. Los puertos Console y los cables seriales no brindan acceso Wi-Fi."
+    "explanation": "Una laptop Wi-Fi se asocia a un AP o a la función inalámbrica de un router. Un switch sin radio y una interfaz serial no brindan asociación inalámbrica."
   },
   {
     "id": 24,
@@ -336,10 +595,10 @@ const QUESTIONS = [
     "question": "Si dos PCs están en la misma LAN, pero una usa 192.168.1.10/24 y otra 192.168.2.10/24, ¿qué ocurre normalmente?",
     "options": [
       "Están en subredes distintas y necesitan enrutamiento para comunicarse",
-      "Se comunican siempre por el switch",
-      "La máscara no importa"
+      "Están en la misma subred porque ambas direcciones comienzan con 192.168",
+      "El switch de capa 2 las comunica automáticamente sin necesidad de enrutamiento"
     ],
-    "explanation": "Con máscara /24, 192.168.1.10 pertenece a 192.168.1.0/24 y 192.168.2.10 a 192.168.2.0/24. Un switch de capa 2 no enruta entre esas subredes: se necesita un router o equipo de capa 3 configurado."
+    "explanation": "Con /24 se consideran los primeros 24 bits: las redes son 192.168.1.0/24 y 192.168.2.0/24. Son distintas aunque compartan los dos primeros octetos. Un switch de capa 2 no enruta entre ellas."
   },
   {
     "id": 25,
@@ -348,10 +607,10 @@ const QUESTIONS = [
     "question": "¿Qué comando se usa comúnmente para probar conectividad IP?",
     "options": [
       "ping",
-      "paint",
-      "print"
+      "ipconfig, que por sí solo envía solicitudes de prueba al destino",
+      "nslookup, que por sí solo confirma que cualquier servicio IP responde"
     ],
-    "explanation": "ping envía solicitudes ICMP para comprobar si el destino responde. Es una prueba inicial de conectividad; puede fallar por filtros ICMP aunque otros servicios funcionen."
+    "explanation": "ping prueba respuesta ICMP del destino. ipconfig muestra configuración local y nslookup consulta DNS: no equivalen a esa prueba. Un ping puede fallar por filtrado aunque otros servicios funcionen."
   },
   {
     "id": 26,
@@ -360,10 +619,10 @@ const QUESTIONS = [
     "question": "¿Qué indica una topología en estrella?",
     "options": [
       "Todos los nodos se conectan a un punto central",
-      "Los equipos forman siempre un círculo",
-      "No hay dispositivos centrales"
+      "Cada nodo se conecta únicamente con dos vecinos formando un circuito",
+      "Todos los equipos comparten un único cable principal sin punto central"
     ],
-    "explanation": "En una estrella los equipos se conectan a un punto central, normalmente un switch. Si cada nodo se conecta con dos vecinos formando un círculo, se trata de un anillo."
+    "explanation": "La estrella usa un punto central. Dos vecinos formando un circuito describen anillo; un cable principal compartido describe bus. No se distinguen por la cantidad de equipos."
   },
   {
     "id": 27,
@@ -372,10 +631,10 @@ const QUESTIONS = [
     "question": "Una red dentro de una casa o aula es generalmente:",
     "options": [
       "LAN",
-      "WAN",
-      "MAN"
+      "MAN",
+      "WAN"
     ],
-    "explanation": "Una LAN cubre un área local, como una casa o un aula. Una MAN cubre un área metropolitana y una WAN conecta redes a grandes distancias."
+    "explanation": "Una casa o aula normalmente corresponde a una LAN por su alcance local. MAN abarca un área metropolitana; WAN conecta redes a grandes distancias. La cantidad de PCs no determina por sí sola la clasificación."
   },
   {
     "id": 28,
@@ -384,10 +643,10 @@ const QUESTIONS = [
     "question": "Una red que conecta sucursales en distintas ciudades es generalmente:",
     "options": [
       "WAN",
-      "PAN",
-      "Una sola LAN"
+      "LAN, porque todas las sucursales pertenecen a la misma empresa",
+      "PAN, porque cada sucursal utiliza dispositivos personales"
     ],
-    "explanation": "Las sucursales en distintas ciudades suelen interconectarse mediante una WAN. Una PAN tiene alcance personal y una LAN abarca un entorno local."
+    "explanation": "El alcance entre ciudades corresponde normalmente a WAN. Pertenecer a la misma empresa no convierte esa extensión en LAN; PAN se refiere a una red personal de corto alcance."
   },
   {
     "id": 29,
@@ -396,10 +655,10 @@ const QUESTIONS = [
     "question": "¿Qué función cumple un servidor en una red?",
     "options": [
       "Ofrece servicios o recursos a otros equipos",
-      "Solo sirve para conectar cables",
-      "Siempre reemplaza al switch"
+      "Reenviar todas las tramas de la LAN según las direcciones MAC",
+      "Regenerar exclusivamente la señal física entre dos segmentos"
     ],
-    "explanation": "Un servidor ofrece servicios o recursos, por ejemplo web, DNS, DHCP o archivos. Su función no es sustituir al switch ni actuar simplemente como unión de cables."
+    "explanation": "Un servidor ofrece servicios y recursos, como archivos, web, DNS o DHCP. Reenviar tramas según MAC es una función de switch; regenerar señales es una función de repetidor."
   },
   {
     "id": 30,
@@ -408,10 +667,10 @@ const QUESTIONS = [
     "question": "Si una PC no puede comunicarse con otra, ¿qué conviene revisar primero?",
     "options": [
       "Cable, enlace, IP, máscara y configuración",
-      "Solo el fondo de pantalla",
-      "La marca del teclado"
+      "Cambiar primero el DNS aunque se esté probando directamente una IP numérica",
+      "Cambiar primero el gateway aunque ambas PCs estén en la misma subred y el enlace esté caído"
     ],
-    "explanation": "Comenzá por el cable, los enlaces y las interfaces, y verificá IP y máscara. Si el destino está en otra subred, revisá también gateway, rutas y reglas de acceso."
+    "explanation": "Se revisan el enlace físico y la configuración IP. Una prueba por IP numérica no necesita resolver DNS. Para comunicarse en la misma subred no se utiliza normalmente el gateway; cambiarlo no repara un enlace caído."
   },
   {
     "id": 31,
@@ -420,10 +679,10 @@ const QUESTIONS = [
     "question": "¿Qué diferencia hay entre switch y router?",
     "options": [
       "El switch conecta equipos en una LAN; el router comunica redes IP",
-      "El router solo conecta teclados",
-      "No hay ninguna diferencia"
+      "El switch de capa 2 enruta entre subredes; el router solo reenvía tramas dentro de una LAN",
+      "El switch elige rutas por IP y el router conecta equipos únicamente según sus MAC"
     ],
-    "explanation": "Un switch de capa 2 conecta equipos y reenvía tramas en una LAN; el router comunica redes IP. Hay switches de capa 3 que también pueden enrutar, pero esa es una capacidad adicional."
+    "explanation": "El switch de capa 2 reenvía tramas mediante MAC; el router decide cómo reenviar paquetes IP entre redes. Hay switches de capa 3 capaces de enrutar, como ya aclara el contexto de la explicación."
   },
   {
     "id": 32,
@@ -432,14 +691,13 @@ const QUESTIONS = [
     "question": "Para conectar dos switches en un ejercicio clásico, ¿qué cable suele enseñarse?",
     "options": [
       "Cobre cruzado",
-      "Consola",
-      "USB"
+      "Cobre directo, obligatorio entre switches cuando ninguno admite auto-MDI/MDIX",
+      "Consola, para transportar el tráfico Ethernet normal entre ambos switches"
     ],
-    "explanation": "La regla clásica para conectar dos switches es usar cobre cruzado. Muchos equipos con auto-MDI/MDIX también admiten directo; en un ejercicio seguí las interfaces y convenciones indicadas."
+    "explanation": "En la regla clásica, sin auto-MDI/MDIX, se enseña cruzado entre switches. Con auto-MDI/MDIX también puede funcionar directo. Consola sirve para administración, no para el tráfico Ethernet normal entre switches."
   }
 ];
-
-const KEY='guia-packet-tracer-examen-v1';
+const KEY='guia-packet-tracer-examen-opciones-v2';
 const app=document.querySelector('#app');
 const dialog=document.querySelector('#confirm');
 const shuffle=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
