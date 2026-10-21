@@ -1,7 +1,478 @@
-<!doctype html>
-<html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#153d32"><title>Mis exámenes · Redes y seguridad</title>
-<style>*{box-sizing:border-box}body{margin:0;background:#f5f6f0;color:#183b32;font-family:system-ui,-apple-system,Segoe UI,sans-serif}header{padding:22px max(24px,calc((100vw - 1040px)/2));background:#fffef9;border-bottom:1px solid #d9dfd3;font-weight:800}header span{background:#153d32;color:#e7f19b;border-radius:8px;padding:5px 10px;margin-right:10px}main{max-width:1040px;margin:auto;padding:65px 24px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:750;color:#607168}h1{font-size:clamp(36px,6vw,56px);letter-spacing:-2px;line-height:1.12;margin:18px 0}p{color:#607168;line-height:1.7}.intro{max-width:600px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}.card{background:#fffef9;border:1px solid #dce2d5;border-radius:18px;padding:28px;display:flex;flex-direction:column}.badge{font-size:12px;font-weight:700;background:#edf2d8;border-radius:20px;padding:7px 12px;align-self:flex-start}h2{font-size:27px;line-height:1.25;letter-spacing:-.7px;margin:22px 0 8px}.count{font-size:40px;font-weight:750;letter-spacing:-1px;margin:12px 0}.count small{font-size:14px;letter-spacing:0;font-weight:400;color:#607168}.card p{flex-grow:1}.button{display:block;text-align:center;background:#153d32;color:white;text-decoration:none;border-radius:10px;padding:15px 20px;font-weight:650;margin-top:20px}.button:hover{background:#285542}a:focus-visible{outline:3px solid #b87518;outline-offset:4px}.features{border-top:1px solid #d9dfd3;margin-top:36px;padding-top:20px;font-size:14px}.note{font-size:12px;margin-top:26px}@media(max-width:680px){main{padding:35px 18px}.cards{grid-template-columns:1fr}.card{padding:24px}}</style></head>
-<body><header><span>↳</span> modo práctica</header><main><div class="eyebrow">Redes y Comunicación</div><h1>Elegí tu próximo<br>examen de práctica.</h1><p class="intro">Dos exámenes, un solo lugar para estudiar. Podés empezar uno y continuar el otro cuando quieras.</p><div class="cards">
-<section class="card"><span class="badge">EXAMEN 01 · ORIGINAL</span><h2>Seguridad en redes</h2><div class="count">23 <small>preguntas · 3 opciones</small></div><p>Conceptos fundamentales, ataques, herramientas de protección, diseño de redes, normativa y configuración segura.</p><a class="button" href="seguridad/index.html">Practicar seguridad →</a></section>
-<section class="card"><span class="badge">EXAMEN 02 · GUÍA DEL PDF</span><h2>Redes y Packet Tracer</h2><div class="count">32 <small>preguntas · 3 opciones</small></div><p>Las preguntas del final de tu guía: 18 de seguridad y 14 de Packet Tracer, dispositivos, cables y conexiones.</p><a class="button" href="guia-packet-tracer/index.html">Practicar la guía →</a></section>
-</div><p class="features">✓ Orden aleatorio en cada intento &nbsp; · &nbsp; ✓ Corrección con explicaciones &nbsp; · &nbsp; ✓ Resultados por tema</p><p class="note">Cada examen guarda su avance de manera independiente en este navegador. Si cambiás de navegador o de dirección web, el avance anterior no se transfiere automáticamente.</p></main></body></html>
+<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#153d32"><title>Mis exámenes · Redes y seguridad</title><style id="page-style"></style></head><body><noscript>Activá JavaScript para usar los exámenes.</noscript><script>(()=>{
+const pages={"inicio": {"body": "<header><span>↳</span> modo práctica</header><main><div class=\"eyebrow\">Redes y Comunicación</div><h1>Elegí tu próximo<br>examen de práctica.</h1><p class=\"intro\">Dos exámenes, un solo lugar para estudiar. Podés empezar uno y continuar el otro cuando quieras.</p><div class=\"cards\">\n<section class=\"card\"><span class=\"badge\">EXAMEN 01 · ORIGINAL</span><h2>Seguridad en redes</h2><div class=\"count\">23 <small>preguntas · 3 opciones</small></div><p>Conceptos fundamentales, ataques, herramientas de protección, diseño de redes, normativa y configuración segura.</p><a class=\"button\" href=\"#seguridad\">Practicar seguridad →</a></section>\n<section class=\"card\"><span class=\"badge\">EXAMEN 02 · GUÍA DEL PDF</span><h2>Redes y Packet Tracer</h2><div class=\"count\">32 <small>preguntas · 3 opciones</small></div><p>Las preguntas del final de tu guía: 18 de seguridad y 14 de Packet Tracer, dispositivos, cables y conexiones.</p><a class=\"button\" href=\"#guia-packet-tracer\">Practicar la guía →</a></section>\n</div><p class=\"features\">✓ Orden aleatorio en cada intento &nbsp; · &nbsp; ✓ Corrección con explicaciones &nbsp; · &nbsp; ✓ Resultados por tema</p><p class=\"note\">Cada examen guarda su avance de manera independiente en este navegador. Si cambiás de navegador o de dirección web, el avance anterior no se transfiere automáticamente.</p></main>", "css": "*{box-sizing:border-box}body{margin:0;background:#f5f6f0;color:#183b32;font-family:system-ui,-apple-system,Segoe UI,sans-serif}header{padding:22px max(24px,calc((100vw - 1040px)/2));background:#fffef9;border-bottom:1px solid #d9dfd3;font-weight:800}header span{background:#153d32;color:#e7f19b;border-radius:8px;padding:5px 10px;margin-right:10px}main{max-width:1040px;margin:auto;padding:65px 24px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:750;color:#607168}h1{font-size:clamp(36px,6vw,56px);letter-spacing:-2px;line-height:1.12;margin:18px 0}p{color:#607168;line-height:1.7}.intro{max-width:600px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}.card{background:#fffef9;border:1px solid #dce2d5;border-radius:18px;padding:28px;display:flex;flex-direction:column}.badge{font-size:12px;font-weight:700;background:#edf2d8;border-radius:20px;padding:7px 12px;align-self:flex-start}h2{font-size:27px;line-height:1.25;letter-spacing:-.7px;margin:22px 0 8px}.count{font-size:40px;font-weight:750;letter-spacing:-1px;margin:12px 0}.count small{font-size:14px;letter-spacing:0;font-weight:400;color:#607168}.card p{flex-grow:1}.button{display:block;text-align:center;background:#153d32;color:white;text-decoration:none;border-radius:10px;padding:15px 20px;font-weight:650;margin-top:20px}.button:hover{background:#285542}a:focus-visible{outline:3px solid #b87518;outline-offset:4px}.features{border-top:1px solid #d9dfd3;margin-top:36px;padding-top:20px;font-size:14px}.note{font-size:12px;margin-top:26px}@media(max-width:680px){main{padding:35px 18px}.cards{grid-template-columns:1fr}.card{padding:24px}}", "title": "Mis exámenes · Redes y seguridad"}, "seguridad": {"body": "<header><div class=\"brand\"><span>↳</span> modo práctica</div><div class=\"small\"><a href=\"#inicio\" style=\"margin-right:16px;text-decoration:none;font-weight:650\">← Elegir examen</a>Redes / Seguridad</div></header><main><div class=\"eyebrow\">Prepará tu parcial</div><h1>Seguridad en redes.</h1><p class=\"intro\">23 preguntas para poner a prueba lo que sabés. Elegí una respuesta por pregunta y revisá las explicaciones al finalizar.</p><div id=\"app\"></div><footer>Práctica de estudio · 1 punto por respuesta correcta · Sin límite de tiempo<br>El orden de las preguntas y de las opciones cambia en cada intento. Tu progreso se guarda en este navegador cuando está disponible.</footer></main><dialog id=\"confirm\"><h2>¿Entregar el examen?</h2><p id=\"confirm-text\"></p><div class=\"dialog-actions\"><button class=\"btn\" id=\"cancel\">Seguir respondiendo</button><button class=\"btn primary\" id=\"deliver\">Ver resultado</button></div></dialog>", "css": "\n:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#183b32;background:#f5f6f0;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button,a,label{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #b87518;outline-offset:4px}header{border-bottom:1px solid #d9dfd3;padding:19px max(24px,calc((100vw - 1120px)/2));display:flex;justify-content:space-between;align-items:center;background:#fffef9}.brand{font-weight:800;letter-spacing:-.6px}.brand span{background:#153d32;color:#e7f19b;padding:6px 10px;border-radius:8px;margin-right:10px}.small,small{font-size:13px;color:#607168}main{max-width:1120px;margin:0 auto;padding:40px 24px 70px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800;color:#607168}h1{font-size:clamp(32px,5vw,52px);letter-spacing:-2px;line-height:1.1;margin:14px 0}h2{font-size:25px;letter-spacing:-.6px;line-height:1.35}p{line-height:1.65}.intro{max-width:660px;color:#607168}.layout{display:grid;grid-template-columns:240px 1fr;gap:28px;margin-top:32px}.panel{background:#fffef9;border:1px solid #dce2d5;border-radius:18px;padding:26px}.sidebar{align-self:start;position:sticky;top:20px}.count{font-size:27px;font-weight:750}.progress{height:6px;background:#e6eadd;border-radius:10px;margin:14px 0 23px;overflow:hidden}.progress>div{height:100%;background:#557b42;transition:width .2s}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.jump{border:1px solid #dce2d5;border-radius:8px;background:transparent;padding:9px 0;color:#526257}.jump.answered{background:#e8efcc;border-color:#cbd8a8;color:#244734}.jump.current{background:#153d32;color:white;border-color:#153d32}.badge{display:inline-block;background:#edf0e5;border-radius:20px;padding:6px 11px;font-size:12px;font-weight:650;margin:0 6px 8px 0}.topic{color:#536f3f;background:#edf2d8}.question-number{font-size:12px;color:#6b766e;margin:17px 0 0}.options{display:grid;gap:12px;margin:26px 0}.option{display:flex;align-items:flex-start;gap:12px;border:1px solid #dbe1d4;border-radius:12px;padding:17px;cursor:pointer;line-height:1.55;transition:background .15s}.option:hover{background:#f5f7ef}.option:has(input:checked){border-color:#436c4d;background:#eef3df;box-shadow:0 0 0 1px #436c4d}.option input{margin-top:5px;accent-color:#254d3e;width:16px;height:16px;flex-shrink:0}.letter{font-weight:750;color:#607168}.actions{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #e6eadd;padding-top:23px}.btn{border:1px solid #cdd7c7;padding:12px 18px;border-radius:9px;font-weight:650;background:#fffef9;color:#244734}.primary{background:#153d32;color:#fff;border-color:#153d32}.btn:disabled{opacity:.4;cursor:default}.finish{width:100%;margin-top:22px}.note{font-size:12px;line-height:1.7;color:#607168}.score{background:#153d32;color:#f8f9ef;border-radius:18px;padding:30px;display:flex;justify-content:space-between;gap:24px;align-items:center;margin:30px 0}.score strong{font-size:55px;letter-spacing:-2px}.score p{margin:0;color:#d0dfcc}.score .btn{background:#e9f2a5;color:#153d32;border:0}.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 30px}.topic-result{padding:18px;border:1px solid #dce2d5;border-radius:12px;background:#fffef9}.topic-result strong{display:block;margin-top:8px}.review{margin:14px 0}.review h3{font-size:19px;line-height:1.5}.status{font-size:12px;font-weight:750}.good{color:#32673d}.bad{color:#ac4630}.answer{padding:12px 16px;border-radius:8px;background:#eef3e5}.wrong{background:#fff0e9;color:#843f2b}.explain{color:#4f6256;font-size:15px}.source{font-size:13px;color:#365d3f}.filter{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.filter .active{background:#153d32;color:white}footer{font-size:12px;color:#6b766e;margin-top:28px}dialog{max-width:440px;border:1px solid #dce2d5;border-radius:18px;padding:28px;color:#183b32;background:#fffef9}dialog::backdrop{background:#142b2690}.dialog-actions{display:flex;gap:12px;justify-content:flex-end}#save-note{min-height:18px}a{color:#365d3f}@media(max-width:720px){main{padding:26px 16px 45px}.layout{grid-template-columns:1fr;gap:16px;margin-top:24px}.sidebar{position:static;padding:18px}.grid{grid-template-columns:repeat(12,1fr);gap:5px}.jump{font-size:12px;padding:7px 0}.sidebar .note{display:none}.finish{margin-top:14px}.progress{margin:8px 0 14px}.count{font-size:20px}.panel{padding:20px}header{padding:17px}.topics{grid-template-columns:repeat(2,1fr)}.score{flex-direction:column;align-items:flex-start}.question-number{margin-top:9px}.options{margin-top:20px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}\n", "title": "Examen · Seguridad en redes"}, "guia-packet-tracer": {"body": "<header><div class=\"brand\"><span>↳</span> modo práctica</div><div class=\"small\"><a href=\"#inicio\" style=\"margin-right:16px;text-decoration:none;font-weight:650\">← Elegir examen</a>Examen 2 / Guía de estudio</div></header><main><div class=\"eyebrow\">Examen de la guía · Independiente</div><h1>Redes y Packet Tracer.</h1><p class=\"intro\">32 preguntas de tu guía: 18 de seguridad y 14 de Packet Tracer y conexiones. Elegí una respuesta por pregunta y revisá las explicaciones al finalizar.</p><div id=\"app\"></div><footer>Preguntas de las secciones 8 y 9 de la guía · 1 punto por respuesta correcta · Sin límite de tiempo<br>El orden de las preguntas y de las opciones cambia en cada intento. Tu progreso se guarda en este navegador cuando está disponible.</footer></main><dialog id=\"confirm\"><h2>¿Entregar el examen?</h2><p id=\"confirm-text\"></p><div class=\"dialog-actions\"><button class=\"btn\" id=\"cancel\">Seguir respondiendo</button><button class=\"btn primary\" id=\"deliver\">Ver resultado</button></div></dialog>", "css": "\n:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#183b32;background:#f5f6f0;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button,a,label{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #b87518;outline-offset:4px}header{border-bottom:1px solid #d9dfd3;padding:19px max(24px,calc((100vw - 1120px)/2));display:flex;justify-content:space-between;align-items:center;background:#fffef9}.brand{font-weight:800;letter-spacing:-.6px}.brand span{background:#153d32;color:#e7f19b;padding:6px 10px;border-radius:8px;margin-right:10px}.small,small{font-size:13px;color:#607168}main{max-width:1120px;margin:0 auto;padding:40px 24px 70px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800;color:#607168}h1{font-size:clamp(32px,5vw,52px);letter-spacing:-2px;line-height:1.1;margin:14px 0}h2{font-size:25px;letter-spacing:-.6px;line-height:1.35}p{line-height:1.65}.intro{max-width:660px;color:#607168}.layout{display:grid;grid-template-columns:240px 1fr;gap:28px;margin-top:32px}.panel{background:#fffef9;border:1px solid #dce2d5;border-radius:18px;padding:26px}.sidebar{align-self:start;position:sticky;top:20px}.count{font-size:27px;font-weight:750}.progress{height:6px;background:#e6eadd;border-radius:10px;margin:14px 0 23px;overflow:hidden}.progress>div{height:100%;background:#557b42;transition:width .2s}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.jump{border:1px solid #dce2d5;border-radius:8px;background:transparent;padding:9px 0;color:#526257}.jump.answered{background:#e8efcc;border-color:#cbd8a8;color:#244734}.jump.current{background:#153d32;color:white;border-color:#153d32}.badge{display:inline-block;background:#edf0e5;border-radius:20px;padding:6px 11px;font-size:12px;font-weight:650;margin:0 6px 8px 0}.topic{color:#536f3f;background:#edf2d8}.question-number{font-size:12px;color:#6b766e;margin:17px 0 0}.options{display:grid;gap:12px;margin:26px 0}.option{display:flex;align-items:flex-start;gap:12px;border:1px solid #dbe1d4;border-radius:12px;padding:17px;cursor:pointer;line-height:1.55;transition:background .15s}.option:hover{background:#f5f7ef}.option:has(input:checked){border-color:#436c4d;background:#eef3df;box-shadow:0 0 0 1px #436c4d}.option input{margin-top:5px;accent-color:#254d3e;width:16px;height:16px;flex-shrink:0}.letter{font-weight:750;color:#607168}.actions{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #e6eadd;padding-top:23px}.btn{border:1px solid #cdd7c7;padding:12px 18px;border-radius:9px;font-weight:650;background:#fffef9;color:#244734}.primary{background:#153d32;color:#fff;border-color:#153d32}.btn:disabled{opacity:.4;cursor:default}.finish{width:100%;margin-top:22px}.note{font-size:12px;line-height:1.7;color:#607168}.score{background:#153d32;color:#f8f9ef;border-radius:18px;padding:30px;display:flex;justify-content:space-between;gap:24px;align-items:center;margin:30px 0}.score strong{font-size:55px;letter-spacing:-2px}.score p{margin:0;color:#d0dfcc}.score .btn{background:#e9f2a5;color:#153d32;border:0}.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 30px}.topic-result{padding:18px;border:1px solid #dce2d5;border-radius:12px;background:#fffef9}.topic-result strong{display:block;margin-top:8px}.review{margin:14px 0}.review h3{font-size:19px;line-height:1.5}.status{font-size:12px;font-weight:750}.good{color:#32673d}.bad{color:#ac4630}.answer{padding:12px 16px;border-radius:8px;background:#eef3e5}.wrong{background:#fff0e9;color:#843f2b}.explain{color:#4f6256;font-size:15px}.source{font-size:13px;color:#365d3f}.filter{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.filter .active{background:#153d32;color:white}footer{font-size:12px;color:#6b766e;margin-top:28px}dialog{max-width:440px;border:1px solid #dce2d5;border-radius:18px;padding:28px;color:#183b32;background:#fffef9}dialog::backdrop{background:#142b2690}.dialog-actions{display:flex;gap:12px;justify-content:flex-end}#save-note{min-height:18px}a{color:#365d3f}@media(max-width:720px){main{padding:26px 16px 45px}.layout{grid-template-columns:1fr;gap:16px;margin-top:24px}.sidebar{position:static;padding:18px}.grid{grid-template-columns:repeat(12,1fr);gap:5px}.jump{font-size:12px;padding:7px 0}.sidebar .note{display:none}.finish{margin-top:14px}.progress{margin:8px 0 14px}.count{font-size:20px}.panel{padding:20px}header{padding:17px}.topics{grid-template-columns:repeat(2,1fr)}.score{flex-direction:column;align-items:flex-start}.question-number{margin-top:9px}.options{margin-top:20px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}\n", "title": "Examen · Redes y Packet Tracer"}};
+const start={"seguridad":function(){
+const QUESTIONS = [
+['Conceptos fundamentales','Seguridad en redes','¿Qué busca la seguridad en redes y por qué resulta cada vez más relevante?', ['Proteger datos, dispositivos y comunicaciones ante riesgos que crecen con la conectividad.','Aumentar el ancho de banda para que todos los dispositivos naveguen más rápido.','Mantener únicamente el hardware para evitar fallas físicas.'], 'La seguridad reduce riesgos para la información y los servicios. La velocidad y el mantenimiento físico pueden ayudar a operar, pero no cubren accesos indebidos, fraude ni ataques.'],
+['Conceptos fundamentales','Tríada CIA','En un sistema de notas, solo acceden personas autorizadas, no se permiten cambios indebidos y el servicio está accesible. ¿Qué orden corresponde?', ['Confidencialidad, integridad y disponibilidad.','Integridad, disponibilidad y confidencialidad.','Disponibilidad, confidencialidad e integridad.'], 'Confidencialidad limita quién ve los datos; integridad protege contra alteraciones indebidas; disponibilidad permite acceder al servicio cuando se necesita.'],
+['Conceptos fundamentales','Autenticación y no repudio','¿Cuál distingue correctamente autenticación de no repudio?', ['La autenticación verifica identidad; el no repudio aporta evidencia de autoría u origen.','La autenticación cifra archivos; el no repudio crea copias de seguridad.','Ambos consisten exclusivamente en ingresar una contraseña.'], 'Ingresar con una credencial verifica identidad. Una firma digital validada puede aportar evidencia de autoría e integridad para el no repudio; una contraseña por sí sola no ofrece la misma evidencia.'],
+['Amenazas y ataques','Caso de ransomware','¿Qué ocurrió en el ataque a Change Healthcare de 2024?', ['El acceso con credenciales comprometidas a un portal sin MFA precedió al ransomware y a interrupciones de pagos y reclamos médicos.','Un ataque DDoS solo saturó su página pública y no afectó sus sistemas internos.','Una falla de Wi-Fi doméstico borró sus bases de datos sin intervención de atacantes.'], 'El caso combinó acceso indebido y ransomware. Se interrumpieron servicios de procesamiento de pagos y reclamos; la respuesta incluyó aislar sistemas y reconstruir servicios. No fue simplemente saturación de una web.', 'https://apnews.com/article/9e2fff70ce4f93566043210bdd347a1f'],
+['Amenazas y ataques','DoS y DDoS','¿Por qué suele ser más difícil mitigar un DDoS que un DoS de un solo origen?', ['El tráfico proviene de múltiples orígenes y cuesta bloquearlo sin afectar usuarios legítimos.','Un DDoS siempre roba contraseñas, mientras que un DoS cifra archivos.','Un DDoS solamente funciona en conexiones inalámbricas.'], 'Ambos buscan afectar la disponibilidad. La distribución entre muchas fuentes aumenta la dificultad de filtrar el ataque y puede agotar enlaces o servicios.'],
+['Amenazas y ataques','Campaña de phishing','En la campaña Storm-2372 documentada en 2025, ¿qué engaño usaron los atacantes?', ['Invitaciones falsas a reuniones de Teams para inducir a completar un flujo de autenticación con código de dispositivo.','Actualizaciones físicas de routers entregadas obligatoriamente a todos los usuarios.','Un corte eléctrico que revelaba automáticamente las contraseñas.'], 'El engaño aprovechó una invitación aparentemente legítima para que la víctima autorizara acceso mediante un código. El phishing también puede abusar de flujos reales de inicio de sesión; no siempre usa una página falsa que pide una contraseña.', 'https://www.microsoft.com/en-us/security/blog/2025/02/13/storm-2372-conducts-device-code-phishing-campaign/'],
+['Amenazas y ataques','Man in the Middle','¿Qué escenario puede facilitar un Man in the Middle en una Wi-Fi pública?', ['Conectarse a un punto de acceso falso controlado por un atacante que intermedia el tráfico.','Mantener el sistema y el navegador actualizados.','Usar una red cuyo nombre sea visible, sin ninguna otra condición.'], 'Un punto de acceso falso puede colocar al atacante en el camino de las comunicaciones. TLS correctamente validado protege el contenido cifrado: intermediar no implica descifrarlo. Bettercap es una herramienta usada en auditorías autorizadas de este tipo.', 'https://www.bettercap.org/'],
+['Amenazas y ataques','Sniffing y spoofing','¿Cuál es la diferencia entre sniffing y spoofing?', ['Sniffing captura tráfico; spoofing falsifica una identidad o información de origen.','Sniffing cifra tráfico; spoofing elimina archivos.','Ambos significan bloquear puertos en un firewall.'], 'Capturar paquetes permite observar tráfico, aunque su contenido puede estar cifrado. Suplantar una dirección IP, MAC u otra identidad es spoofing. Son técnicas distintas que pueden combinarse.'],
+['Herramientas y protección','Tipos de firewall','¿Qué aporta cada evolución del firewall?', ['Filtrado: encabezados; stateful: estado de conexiones; NGFW: análisis de aplicaciones y protección avanzada.','Filtrado: aplicaciones; stateful: solo direcciones; NGFW: elimina la necesidad de reglas.','Todos analizan lo mismo y únicamente cambia su velocidad.'], 'El filtrado básico evalúa datos como IP, protocolo y puerto. Stateful considera el contexto de una conexión. NGFW suma funciones como identificación de aplicaciones e inspección avanzada, según configuración y capacidades.'],
+['Herramientas y protección','IDS e IPS','¿Qué diferencia principal existe entre IDS e IPS?', ['El IDS detecta y alerta; un IPS configurado en línea puede bloquear tráfico malicioso.','El IDS cifra contraseñas y el IPS administra el Wi-Fi.','El IDS protege teléfonos y el IPS exclusivamente servidores.'], 'La diferencia está en detectar frente a intervenir para prevenir. Snort y Suricata pueden operar como IDS o IPS según el modo de implementación: no son categorías exclusivas de una marca.'],
+['Herramientas y protección','TLS y HTTPS','¿Qué significa el indicador de conexión segura de un navegador?', ['La conexión usa TLS y el certificado fue aceptado; no garantiza que el sitio sea honesto.','El sitio está libre de estafas porque usa HTTPS.','La página pertenece necesariamente a un organismo oficial.'], 'TLS protege la confidencialidad e integridad de la conexión y permite autenticar al servidor mediante certificados. SSL es su predecesor obsoleto. La forma del indicador varía entre navegadores; una web fraudulenta también puede tener HTTPS.'],
+['Herramientas y protección','VPN','¿Cómo funciona una VPN y cuándo resulta útil?', ['Crea un túnel protegido hacia un servidor o red; sirve para acceder a recursos de una organización a distancia.','Elimina el malware y garantiza anonimato absoluto.','Hace que cualquier página web sea confiable.'], 'La VPN protege el tramo del túnel y puede dar acceso remoto a recursos privados. No reemplaza actualizaciones, HTTPS ni precauciones frente al phishing; el proveedor o la red de destino siguen siendo parte de la confianza.'],
+['Herramientas y protección','Autenticación multifactor','¿Qué combinación es MFA?', ['Una contraseña y un código generado en una aplicación autenticadora de tu dispositivo.','Una contraseña y una pregunta de seguridad.','La misma contraseña ingresada dos veces.'], 'MFA combina factores de categorías distintas: algo que sabés, tenés o sos. Una aplicación autenticadora, una llave física y un código por SMS son posibles segundos factores, aunque no brindan la misma resistencia al phishing. Dos secretos memorizados siguen siendo un solo tipo de factor.'],
+['Diseño de redes seguras','VLANs','¿Qué ventaja ofrece separar una red en VLANs?', ['Separar grupos de dispositivos y aplicar controles al tráfico entre segmentos.','Impedir automáticamente todos los ataques sin configurar reglas.','Reemplazar contraseñas y actualizaciones.'], 'Las VLANs separan dominios de broadcast y facilitan la segmentación. Para limitar acceso entre ellas se requieren ACL o firewalls y una configuración adecuada; la separación por sí sola no resuelve toda la seguridad.'],
+['Diseño de redes seguras','DMZ','¿Por qué una base de datos sensible suele quedar en una red interna y no en la DMZ?', ['La DMZ aloja servicios expuestos; mantener la base en otro segmento restringido reduce su exposición.','La DMZ no admite servidores.','Toda DMZ elimina automáticamente el cifrado de los datos.'], 'Una DMZ separa servicios accesibles desde redes externas. Si un servidor público resulta comprometido, los controles hacia la red de datos ayudan a limitar el daño. Solo deben permitirse las conexiones necesarias.'],
+['Diseño de redes seguras','VLAN hopping','¿Qué es VLAN hopping y cómo se reduce su riesgo?', ['Es intentar acceder a otra VLAN; se mitiga configurando puertos de acceso, troncales y VLAN nativa de forma segura.','Es cambiar el nombre de una VLAN; se evita ocultando el SSID.','Es saturar internet; se evita contratando más velocidad.'], 'Incluye técnicas como suplantar un switch o aprovechar doble etiquetado. Se recomienda evitar negociación automática de troncales donde no corresponde, limitar VLANs permitidas y no usar la VLAN nativa para usuarios.'],
+['Gestión y normativa','NIST CSF','¿Qué establece el NIST Cybersecurity Framework 2.0?', ['Un marco para gestionar riesgos mediante Gobernar, Identificar, Proteger, Detectar, Responder y Recuperar.','Una garantía de que las organizaciones no sufrirán ataques.','Una ley que reemplaza todas las normas de cada país.'], 'El CSF organiza resultados y actividades de gestión de riesgos. No es una garantía ni sustituye la legislación. La versión 2.0 incluye Gobernar como una de sus seis funciones.', 'https://www.nist.gov/news-events/news/2024/02/nist-releases-version-20-landmark-cybersecurity-framework'],
+['Gestión y normativa','CSIRT / CERT en Argentina','¿Qué es CERT.ar?', ['El equipo nacional de respuesta que coordina y apoya la gestión de incidentes informáticos.','Un antivirus obligatorio para cualquier computadora argentina.','Una empresa que vende certificados para sitios web.'], 'Un CSIRT/CERT es un equipo de respuesta a incidentes. CERT.ar trabaja en la coordinación de incidentes, prevención y protección del Sector Público Nacional y de infraestructuras críticas de información.', 'https://www.argentina.gob.ar/ciberseguridad/certar/funciones'],
+['Gestión y normativa','Evidencia y cadena de custodia','¿Por qué se evalúa un equipo comprometido antes de apagarlo?', ['Podrían perderse datos volátiles; además, se debe documentar quién recoge, conserva y analiza la evidencia.','Apagarlo borra siempre todos los datos del disco.','Mantenerlo encendido garantiza que el atacante deje de actuar.'], 'La RAM y conexiones activas pueden aportar evidencia que se pierde al apagar. La cadena de custodia registra el manejo de esa evidencia para preservar su trazabilidad e integridad. La decisión depende de la contención y del protocolo: no significa dejar el equipo conectado sin control.'],
+['Gestión y normativa','Legislación argentina','¿Qué asociación entre normas y contenidos es correcta?', ['Ley 25.326: protección de datos personales; Ley 26.388: incorporación y modificación de delitos informáticos en el Código Penal.','Ley 25.326: velocidades de Wi-Fi; Ley 26.388: nombres de VLANs.','Ambas son recomendaciones comerciales sin carácter legal.'], 'La Ley 25.326 regula la protección de datos personales. La Ley 26.388 reformó el Código Penal para contemplar conductas vinculadas con sistemas y datos informáticos. Son normas legales, distintas de marcos voluntarios como NIST.', 'https://www.argentina.gob.ar/jefatura/innovacion-publica/direccion-nacional-ciberseguridad/normativa'],
+['Gestión y normativa','Casos de empresas argentinas','¿Qué afirmación corresponde a incidentes informados por Telecom y Mercado Libre?', ['Telecom informó contención de un ciberataque en 2020; Mercado Libre comunicó acceso no autorizado a datos de unos 300.000 usuarios en 2022.','Ambas empresas afirmaron que HTTPS hace imposible cualquier ataque.','Mercado Libre informó que el incidente de 2022 consistió únicamente en una falla eléctrica.'], 'Telecom describió la contención en su reporte 2020. Mercado Libre comunicó el acceso a datos y la activación de protocolos; su análisis inicial no encontró evidencia de obtención de contraseñas ni información de tarjetas. Esa declaración inicial no permite afirmar que nunca existieron otros impactos.', 'https://www.mercadolibre.com.mx/institucional/comunicamos/noticias/comunicado-mercado-libre-seguridad'],
+['Configuración segura','Seguridad de una red','¿Qué conjunto de acciones mejora la seguridad de una red?', ['Inventariar equipos, segmentar, restringir accesos, actualizar, configurar firewall y revisar registros.','Permitir toda comunicación y conservar contraseñas predeterminadas.','Instalar un antivirus en un equipo y omitir los demás controles.'], 'La seguridad se construye con varias medidas: conocer los activos, aplicar mínimo privilegio, proteger la administración, actualizar y monitorear. También conviene disponer de copias de seguridad probadas y un plan de respuesta.'],
+['Configuración segura','Wi-Fi doméstica','¿Qué configuración protege mejor una conexión Wi-Fi doméstica?', ['WPA3 o WPA2-AES, contraseñas robustas, firmware actualizado y WPS desactivado si no se necesita.','Ocultar el nombre de la red y dejarla sin contraseña.','Usar WEP y conservar la contraseña de administración original.'], 'WPA3 o WPA2 con AES protegen la conexión inalámbrica. También hay que cambiar las credenciales del administrador y actualizar el router. Ocultar el SSID no sustituye el cifrado, y WEP es inseguro.']
+].map((q,i)=>({id:i+1,group:q[0],topic:q[1],question:q[2],options:q[3],explanation:q[4],source:q[5]}));
+
+const KEY='redes-examen-v1';
+const app=document.querySelector('#app');
+const dialog=document.querySelector('#confirm');
+const shuffle=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+function differentShuffle(items,previous){let a=shuffle(items);if(previous&&a.every((v,i)=>v===previous[i]))a.push(a.shift());return a;}
+let state,filter='all',storageOK=true;
+function fresh(previous){return {order:differentShuffle(QUESTIONS.map(q=>q.id),previous?.order),options:Object.fromEntries(QUESTIONS.map(q=>[q.id,differentShuffle([0,1,2],previous?.options[q.id])])),answers:{},index:0,done:false,attempt:(previous?.attempt||0)+1};}
+function valid(s){return s&&typeof s.done==='boolean'&&Number.isInteger(s.attempt)&&Number.isInteger(s.index)&&s.index>=0&&s.index<23&&Array.isArray(s.order)&&s.order.length===23&&new Set(s.order).size===23&&s.order.every(id=>QUESTIONS.some(q=>q.id===id)&&Array.isArray(s.options?.[id])&&[...s.options[id]].sort().join()==='0,1,2')&&s.answers&&Object.entries(s.answers).every(([k,v])=>s.order.includes(Number(k))&&[0,1,2].includes(v));}
+try{const saved=JSON.parse(localStorage.getItem(KEY));state=valid(saved)?saved:fresh();}catch{state=fresh();storageOK=false;}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch{storageOK=false;}}
+const getQuestion=id=>QUESTIONS.find(q=>q.id===id);
+const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function render(){save();if(state.done)return results();const q=getQuestion(state.order[state.index]),count=Object.keys(state.answers).length;
+app.innerHTML=`<div class="layout"><aside class="panel sidebar" aria-label="Navegación del examen"><div class="eyebrow">Intento ${state.attempt}</div><p class="count" style="margin:10px 0">${count} <span class="small">/ 23 respondidas</span></p><div class="progress" role="progressbar" aria-label="Preguntas respondidas" aria-valuenow="${count}" aria-valuemin="0" aria-valuemax="23"><div style="width:${count/23*100}%"></div></div><div class="grid">${state.order.map((id,i)=>`<button class="jump ${state.answers[id]!==undefined?'answered':''} ${i===state.index?'current':''}" data-jump="${i}" aria-label="Pregunta ${i+1}${state.answers[id]!==undefined?', respondida':', pendiente'}" ${i===state.index?'aria-current="step"':''}>${i+1}</button>`).join('')}</div><p class="note">Podés volver a cualquier pregunta y cambiar tu respuesta antes de entregar.</p><button class="btn primary finish" id="finish">Finalizar examen</button></aside><section class="panel" aria-labelledby="question"><span class="badge">${q.group}</span><span class="badge topic">${q.topic}</span><p class="question-number">PREGUNTA ${state.index+1} DE 23</p><h2 id="question" tabindex="-1">${q.question}</h2><div class="options" role="radiogroup" aria-labelledby="question">${state.options[q.id].map((v,i)=>`<label class="option"><input type="radio" name="answer" value="${v}" ${state.answers[q.id]===v?'checked':''}><span><span class="letter">${'ABC'[i]}.</span> ${q.options[v]}</span></label>`).join('')}</div><div class="actions"><button class="btn" id="prev" ${state.index===0?'disabled':''}>← Anterior</button><button class="btn primary" id="next">${state.index===22?'Revisar y entregar':'Siguiente →'}</button></div><p class="note" id="save-note" aria-live="polite">${storageOK?'Tu progreso se guarda automáticamente.':'El guardado no está disponible. Mantené esta pestaña abierta.'}</p></section></div>`;
+app.querySelectorAll('[data-jump]').forEach(b=>b.onclick=()=>go(Number(b.dataset.jump)));app.querySelectorAll('input').forEach(input=>input.onchange=()=>{state.answers[q.id]=Number(input.value);save();const focused=input.value;render();app.querySelector(`input[value="${focused}"]`).focus();});app.querySelector('#prev').onclick=()=>go(state.index-1);app.querySelector('#next').onclick=()=>state.index===22?confirmEnd():go(state.index+1);app.querySelector('#finish').onclick=confirmEnd;}
+function go(index){state.index=index;render();document.querySelector('#question').focus();}
+function confirmEnd(){const pending=23-Object.keys(state.answers).length;document.querySelector('#confirm-text').textContent=pending?`Te quedan ${pending} preguntas sin responder. Si entregás ahora, contarán como incorrectas.`:'Respondiste las 23 preguntas. Vas a ver tu puntaje y las explicaciones.';dialog.showModal();}
+document.querySelector('#cancel').onclick=()=>dialog.close();document.querySelector('#deliver').onclick=()=>{dialog.close();state.done=true;filter='all';render();window.scrollTo({top:0,behavior:'smooth'});};
+function results(){const correct=QUESTIONS.filter(q=>state.answers[q.id]===0).length;const groups=[...new Set(QUESTIONS.map(q=>q.group))];const pending=23-Object.keys(state.answers).length;
+app.innerHTML=`<section aria-label="Resultado"><div class="score"><div><div class="eyebrow" style="color:#d6e5b7">Resultado · Intento ${state.attempt}</div><strong>${correct}<span style="font-size:28px;color:#bdcfbd"> / 23</span></strong><p>${Math.round(correct/23*100)}% de aciertos · ${23-correct-pending} incorrectas · ${pending} sin responder</p></div><button class="btn" id="retry">Repetir examen ↗</button></div><h2>Tu desempeño por tema</h2><div class="topics">${groups.map(g=>{const qs=QUESTIONS.filter(q=>q.group===g);return `<div class="topic-result"><small>${g}</small><strong>${qs.filter(q=>state.answers[q.id]===0).length} / ${qs.length} correctas</strong></div>`;}).join('')}</div><h2>Aprendé de cada respuesta</h2><p class="small">La respuesta correcta y su explicación aparecen debajo de cada pregunta.</p><div class="filter"><button class="btn ${filter==='all'?'active':''}" data-filter="all">Todas (23)</button><button class="btn ${filter==='errors'?'active':''}" data-filter="errors">Errores y pendientes (${23-correct})</button></div><div id="reviews">${state.order.map((id,i)=>{const q=getQuestion(id),answer=state.answers[id],ok=answer===0;if(filter==='errors'&&ok)return '';return `<article class="panel review"><span class="status ${ok?'good':'bad'}">${ok?'✓ Correcta':answer===undefined?'○ Sin responder':'✕ Incorrecta'}</span><span class="badge topic" style="margin-left:10px">${q.topic}</span><div class="small">${q.group}</div><h3>${i+1}. ${q.question}</h3>${!ok?`<p class="answer wrong"><b>Tu respuesta:</b> ${answer===undefined?'No seleccionaste una opción.':escapeHTML(q.options[answer])}</p>`:''}<p class="answer"><b>Respuesta correcta:</b> ${q.options[0]}</p><p class="explain"><b>${ok?'Por qué es correcta:':'Para repasar:'}</b> ${q.explanation}</p>${q.source?`<a class="source" href="${q.source}" target="_blank" rel="noopener noreferrer">Consultar fuente ↗</a>`:''}${q.id===21?' · <a class="source" href="https://institucional.telecom.com.ar/assets/files/sustainability/reports/file_download_grid/Reporte%20Sustentabilidad%202020%20Integrado_Esp.pdf" target="_blank" rel="noopener noreferrer">Reporte de Telecom ↗</a>':''}</article>`;}).join('')||'<div class="panel"><h3>¡Sin errores para repasar!</h3><p>Respondiste correctamente las 23 preguntas.</p></div>'}</div></section>`;
+app.querySelector('#retry').onclick=()=>{state=fresh(state);filter='all';render();window.scrollTo({top:0,behavior:'smooth'});};app.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;results();});}
+render();
+
+},
+"guia-packet-tracer":function(){
+const QUESTIONS = [
+  {
+    "id": 1,
+    "group": "Seguridad en redes",
+    "topic": "Confidencialidad",
+    "question": "¿Cuál es el objetivo de la confidencialidad?",
+    "options": [
+      "Que solo accedan personas autorizadas",
+      "Que los datos estén siempre disponibles",
+      "Que los equipos tengan más velocidad"
+    ],
+    "explanation": "La confidencialidad limita el acceso a quienes tienen autorización. Que los datos estén accesibles cuando se necesitan corresponde a disponibilidad, no a confidencialidad."
+  },
+  {
+    "id": 2,
+    "group": "Seguridad en redes",
+    "topic": "Integridad",
+    "question": "Si alguien cambia una nota sin permiso, ¿qué pilar se afecta?",
+    "options": [
+      "Integridad",
+      "Disponibilidad",
+      "Autenticación"
+    ],
+    "explanation": "Cambiar un dato sin permiso afecta su integridad. Disponibilidad se refiere a poder acceder al servicio; autenticación consiste en comprobar una identidad."
+  },
+  {
+    "id": 3,
+    "group": "Seguridad en redes",
+    "topic": "DDoS",
+    "question": "¿Qué describe mejor un ataque DDoS?",
+    "options": [
+      "Muchos dispositivos saturan un servicio",
+      "Una única PC cifra archivos",
+      "Un usuario crea una contraseña"
+    ],
+    "explanation": "Un DDoS utiliza múltiples fuentes para saturar un servicio y afectar su disponibilidad. Cifrar archivos es una conducta asociada al ransomware."
+  },
+  {
+    "id": 4,
+    "group": "Seguridad en redes",
+    "topic": "Phishing",
+    "question": "Un mensaje falso del correo que pide confirmar la clave es:",
+    "options": [
+      "Phishing",
+      "VLAN",
+      "VPN"
+    ],
+    "explanation": "El phishing suplanta una identidad para engañar y obtener información o acciones de la víctima. VLAN y VPN son tecnologías de red, no ese tipo de engaño."
+  },
+  {
+    "id": 5,
+    "group": "Seguridad en redes",
+    "topic": "Sniffing y spoofing",
+    "question": "¿Cuál es la diferencia central entre sniffing y spoofing?",
+    "options": [
+      "Sniffing captura tráfico; spoofing falsifica identidad",
+      "Son exactamente iguales",
+      "Spoofing solo sirve para cifrar"
+    ],
+    "explanation": "Sniffing significa capturar tráfico; spoofing significa suplantar una identidad o un origen. Pueden combinarse, pero no son lo mismo ni equivalen a cifrar."
+  },
+  {
+    "id": 6,
+    "group": "Seguridad en redes",
+    "topic": "IDS",
+    "question": "¿Qué hace principalmente un IDS?",
+    "options": [
+      "Detecta y alerta",
+      "Siempre bloquea automáticamente",
+      "Asigna direcciones IP"
+    ],
+    "explanation": "Un IDS identifica actividad sospechosa y genera alertas. El bloqueo en línea corresponde al papel de un IPS. Asignar direcciones IP automáticamente es una función de DHCP."
+  },
+  {
+    "id": 7,
+    "group": "Seguridad en redes",
+    "topic": "IPS",
+    "question": "¿Qué puede hacer un IPS?",
+    "options": [
+      "Detectar y bloquear tráfico malicioso",
+      "Solo imprimir informes",
+      "Reemplazar todos los switches"
+    ],
+    "explanation": "Un IPS puede detectar y bloquear tráfico malicioso según sus reglas. No sustituye a los switches, que conectan equipos y reenvían tramas."
+  },
+  {
+    "id": 8,
+    "group": "Seguridad en redes",
+    "topic": "Firewall stateful",
+    "question": "¿Qué aporta un firewall stateful?",
+    "options": [
+      "Recuerda el estado de conexiones",
+      "No revisa ningún paquete",
+      "Solo conecta Wi-Fi"
+    ],
+    "explanation": "Un firewall stateful mantiene información del estado de las conexiones para evaluar el tráfico en contexto. No se limita a brindar acceso Wi-Fi ni deja de inspeccionar paquetes."
+  },
+  {
+    "id": 9,
+    "group": "Seguridad en redes",
+    "topic": "HTTPS y TLS",
+    "question": "¿Qué significa HTTPS?",
+    "options": [
+      "Comunicación HTTP protegida con TLS",
+      "Garantía de que la página es honesta",
+      "Una red local"
+    ],
+    "explanation": "HTTPS es HTTP protegido mediante TLS. Protege la comunicación, pero no garantiza que el contenido o la persona que administra la página sean confiables."
+  },
+  {
+    "id": 10,
+    "group": "Seguridad en redes",
+    "topic": "MFA",
+    "question": "¿Qué agrega MFA?",
+    "options": [
+      "Más de un factor de autenticación",
+      "Más cables a la red",
+      "Una segunda dirección IP"
+    ],
+    "explanation": "MFA combina factores de categorías diferentes: algo que sabés, algo que tenés o algo que sos. Por ejemplo, una contraseña y una llave física. No agrega cables ni direcciones IP."
+  },
+  {
+    "id": 11,
+    "group": "Seguridad en redes",
+    "topic": "VLAN",
+    "question": "¿Para qué sirve una VLAN?",
+    "options": [
+      "Separar lógicamente grupos dentro de una red",
+      "Aumentar físicamente el largo de un cable",
+      "Reemplazar el router siempre"
+    ],
+    "explanation": "Una VLAN separa lógicamente grupos de dispositivos y dominios de difusión. La comunicación entre VLANs requiere enrutamiento y los controles correspondientes."
+  },
+  {
+    "id": 12,
+    "group": "Seguridad en redes",
+    "topic": "DMZ",
+    "question": "¿Qué es una DMZ?",
+    "options": [
+      "Un área aislada para servicios accesibles desde fuera",
+      "Una contraseña",
+      "Un tipo de cable de consola"
+    ],
+    "explanation": "La DMZ es un segmento separado para servicios expuestos a redes externas, como un servidor web. Se aplican reglas para limitar el acceso hacia la red interna."
+  },
+  {
+    "id": 13,
+    "group": "Seguridad en redes",
+    "topic": "VPN",
+    "question": "¿Qué es una VPN?",
+    "options": [
+      "Un túnel de comunicación cifrado",
+      "Un ataque que bloquea una web",
+      "Una impresora"
+    ],
+    "explanation": "Una VPN crea un túnel protegido hacia un servidor o una red. No es un ataque ni un dispositivo de impresión y no vuelve confiable cualquier sitio."
+  },
+  {
+    "id": 14,
+    "group": "Seguridad en redes",
+    "topic": "Cadena de custodia",
+    "question": "¿Qué busca la cadena de custodia?",
+    "options": [
+      "Registrar el manejo de la evidencia",
+      "Acelerar el Wi-Fi",
+      "Crear VLANs automáticamente"
+    ],
+    "explanation": "La cadena de custodia documenta quién tuvo la evidencia, cuándo y cómo la manejó. Ayuda a mantener su trazabilidad e integridad durante una investigación."
+  },
+  {
+    "id": 15,
+    "group": "Seguridad en redes",
+    "topic": "Seguridad Wi-Fi",
+    "question": "¿Qué medida ayuda a proteger el Wi-Fi doméstico?",
+    "options": [
+      "Usar WPA2/WPA3 y una clave fuerte",
+      "Dejar la clave por defecto",
+      "Compartir la clave públicamente"
+    ],
+    "explanation": "Usar WPA3 o WPA2 con AES y una contraseña robusta mejora la protección inalámbrica. También conviene cambiar la clave de administración y actualizar el router."
+  },
+  {
+    "id": 16,
+    "group": "Seguridad en redes",
+    "topic": "Ransomware",
+    "question": "¿Qué hace un ransomware?",
+    "options": [
+      "Cifra o bloquea datos y exige rescate",
+      "Solo mide velocidad",
+      "Conecta dos switches"
+    ],
+    "explanation": "El ransomware cifra o bloquea datos y exige un rescate. Las copias de seguridad protegidas y probadas ayudan a recuperar la información; pagar no garantiza recuperarla."
+  },
+  {
+    "id": 17,
+    "group": "Seguridad en redes",
+    "topic": "CSIRT / CERT",
+    "question": "¿Cuál es una función del CSIRT/CERT?",
+    "options": [
+      "Responder y ayudar a gestionar incidentes",
+      "Fabricar cables",
+      "Cambiar las pantallas de las PCs"
+    ],
+    "explanation": "Un CSIRT/CERT es un equipo de respuesta a incidentes: ayuda a prevenir, analizar, coordinar y gestionar problemas de seguridad. No se dedica a fabricar cables o pantallas."
+  },
+  {
+    "id": 18,
+    "group": "Seguridad en redes",
+    "topic": "Prevención del phishing",
+    "question": "¿Cuál es una buena reacción ante un correo sospechoso?",
+    "options": [
+      "Verificar el remitente y entrar al sitio oficial por separado",
+      "Abrir todos los enlaces",
+      "Enviar la contraseña para comprobar"
+    ],
+    "explanation": "Verificá el remitente y accedé al sitio oficial por una vía independiente, sin usar los enlaces sospechosos. El nombre visible del remitente por sí solo no demuestra autenticidad."
+  },
+  {
+    "id": 19,
+    "group": "Packet Tracer y conexiones",
+    "topic": "Switch",
+    "question": "¿Qué dispositivo conecta normalmente varias PCs dentro de una LAN?",
+    "options": [
+      "Switch",
+      "Router",
+      "Modem solamente"
+    ],
+    "explanation": "Un switch conecta equipos dentro de una LAN y reenvía tramas según direcciones MAC. Un router se utiliza para comunicar redes IP distintas."
+  },
+  {
+    "id": 20,
+    "group": "Packet Tracer y conexiones",
+    "topic": "Router",
+    "question": "¿Qué dispositivo permite comunicar redes IP diferentes?",
+    "options": [
+      "Router",
+      "Impresora",
+      "Cable de consola"
+    ],
+    "explanation": "El router reenvía paquetes entre redes IP. Una impresora es un dispositivo final y un cable de consola se usa para administración, no para enrutar."
+  },
+  {
+    "id": 21,
+    "group": "Packet Tracer y conexiones",
+    "topic": "Cable directo",
+    "question": "¿Qué cable se usa típicamente entre PC y switch?",
+    "options": [
+      "Cobre directo",
+      "Serial DCE",
+      "Consola"
+    ],
+    "explanation": "La conexión clásica PC–switch usa cobre directo. Un cable de consola sirve para administrar el equipo; un serial DCE se utiliza en determinadas prácticas WAN."
+  },
+  {
+    "id": 22,
+    "group": "Packet Tracer y conexiones",
+    "topic": "Cable de consola",
+    "question": "¿Qué conexión es típica entre una PC y un switch para administrar el equipo por CLI?",
+    "options": [
+      "Cable de consola desde la PC al puerto Console del equipo",
+      "Cable de fibra a cualquier puerto",
+      "Cable serial DCE a la impresora"
+    ],
+    "explanation": "Para administrar localmente por consola se conecta la PC al puerto Console del switch con un cable de consola. No transporta el tráfico normal de usuarios. También existe administración remota, por ejemplo mediante SSH."
+  },
+  {
+    "id": 23,
+    "group": "Packet Tracer y conexiones",
+    "topic": "Acceso inalámbrico",
+    "question": "Una laptop conectada por Wi-Fi suele asociarse a:",
+    "options": [
+      "Access Point/router inalámbrico",
+      "Cable serial",
+      "Puerto Console"
+    ],
+    "explanation": "Una laptop Wi-Fi se asocia a un punto de acceso o a la función inalámbrica de un router. Los puertos Console y los cables seriales no brindan acceso Wi-Fi."
+  },
+  {
+    "id": 24,
+    "group": "Packet Tracer y conexiones",
+    "topic": "Subredes y enrutamiento",
+    "question": "Si dos PCs están en la misma LAN, pero una usa 192.168.1.10/24 y otra 192.168.2.10/24, ¿qué ocurre normalmente?",
+    "options": [
+      "Están en subredes distintas y necesitan enrutamiento para comunicarse",
+      "Se comunican siempre por el switch",
+      "La máscara no importa"
+    ],
+    "explanation": "Con máscara /24, 192.168.1.10 pertenece a 192.168.1.0/24 y 192.168.2.10 a 192.168.2.0/24. Un switch de capa 2 no enruta entre esas subredes: se necesita un router o equipo de capa 3 configurado."
+  },
+  {
+    "id": 25,
+    "group": "Packet Tracer y conexiones",
+    "topic": "Prueba de conectividad",
+    "question": "¿Qué comando se usa comúnmente para probar conectividad IP?",
+    "options": [
+      "ping",
+      "paint",
+      "print"
+    ],
+    "explanation": "ping envía solicitudes ICMP para comprobar si el destino responde. Es una prueba inicial de conectividad; puede fallar por filtros ICMP aunque otros servicios funcionen."
+  },
+  {
+    "id": 26,
+    "group": "Packet Tracer y conexiones",
+    "topic": "Topología en estrella",
+    "question": "¿Qué indica una topología en estrella?",
+    "options": [
+      "Todos los nodos se conectan a un punto central",
+      "Los equipos forman siempre un círculo",
+      "No hay dispositivos centrales"
+    ],
+    "explanation": "En una estrella los equipos se conectan a un punto central, normalmente un switch. Si cada nodo se conecta con dos vecinos formando un círculo, se trata de un anillo."
+  },
+  {
+    "id": 27,
+    "group": "Packet Tracer y conexiones",
+    "topic": "LAN",
+    "question": "Una red dentro de una casa o aula es generalmente:",
+    "options": [
+      "LAN",
+      "WAN",
+      "MAN"
+    ],
+    "explanation": "Una LAN cubre un área local, como una casa o un aula. Una MAN cubre un área metropolitana y una WAN conecta redes a grandes distancias."
+  },
+  {
+    "id": 28,
+    "group": "Packet Tracer y conexiones",
+    "topic": "WAN",
+    "question": "Una red que conecta sucursales en distintas ciudades es generalmente:",
+    "options": [
+      "WAN",
+      "PAN",
+      "Una sola LAN"
+    ],
+    "explanation": "Las sucursales en distintas ciudades suelen interconectarse mediante una WAN. Una PAN tiene alcance personal y una LAN abarca un entorno local."
+  },
+  {
+    "id": 29,
+    "group": "Packet Tracer y conexiones",
+    "topic": "Servidor",
+    "question": "¿Qué función cumple un servidor en una red?",
+    "options": [
+      "Ofrece servicios o recursos a otros equipos",
+      "Solo sirve para conectar cables",
+      "Siempre reemplaza al switch"
+    ],
+    "explanation": "Un servidor ofrece servicios o recursos, por ejemplo web, DNS, DHCP o archivos. Su función no es sustituir al switch ni actuar simplemente como unión de cables."
+  },
+  {
+    "id": 30,
+    "group": "Packet Tracer y conexiones",
+    "topic": "Diagnóstico de conexión",
+    "question": "Si una PC no puede comunicarse con otra, ¿qué conviene revisar primero?",
+    "options": [
+      "Cable, enlace, IP, máscara y configuración",
+      "Solo el fondo de pantalla",
+      "La marca del teclado"
+    ],
+    "explanation": "Comenzá por el cable, los enlaces y las interfaces, y verificá IP y máscara. Si el destino está en otra subred, revisá también gateway, rutas y reglas de acceso."
+  },
+  {
+    "id": 31,
+    "group": "Packet Tracer y conexiones",
+    "topic": "Switch y router",
+    "question": "¿Qué diferencia hay entre switch y router?",
+    "options": [
+      "El switch conecta equipos en una LAN; el router comunica redes IP",
+      "El router solo conecta teclados",
+      "No hay ninguna diferencia"
+    ],
+    "explanation": "Un switch de capa 2 conecta equipos y reenvía tramas en una LAN; el router comunica redes IP. Hay switches de capa 3 que también pueden enrutar, pero esa es una capacidad adicional."
+  },
+  {
+    "id": 32,
+    "group": "Packet Tracer y conexiones",
+    "topic": "Cable cruzado",
+    "question": "Para conectar dos switches en un ejercicio clásico, ¿qué cable suele enseñarse?",
+    "options": [
+      "Cobre cruzado",
+      "Consola",
+      "USB"
+    ],
+    "explanation": "La regla clásica para conectar dos switches es usar cobre cruzado. Muchos equipos con auto-MDI/MDIX también admiten directo; en un ejercicio seguí las interfaces y convenciones indicadas."
+  }
+];
+
+const KEY='guia-packet-tracer-examen-v1';
+const app=document.querySelector('#app');
+const dialog=document.querySelector('#confirm');
+const shuffle=items=>{const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+function differentShuffle(items,previous){let a=shuffle(items);if(previous&&a.every((v,i)=>v===previous[i]))a.push(a.shift());return a;}
+let state,filter='all',storageOK=true;
+function fresh(previous){return {order:differentShuffle(QUESTIONS.map(q=>q.id),previous?.order),options:Object.fromEntries(QUESTIONS.map(q=>[q.id,differentShuffle([0,1,2],previous?.options[q.id])])),answers:{},index:0,done:false,attempt:(previous?.attempt||0)+1};}
+function valid(s){return s&&typeof s.done==='boolean'&&Number.isInteger(s.attempt)&&Number.isInteger(s.index)&&s.index>=0&&s.index<32&&Array.isArray(s.order)&&s.order.length===32&&new Set(s.order).size===32&&s.order.every(id=>QUESTIONS.some(q=>q.id===id)&&Array.isArray(s.options?.[id])&&[...s.options[id]].sort().join()==='0,1,2')&&s.answers&&Object.entries(s.answers).every(([k,v])=>s.order.includes(Number(k))&&[0,1,2].includes(v));}
+try{const saved=JSON.parse(localStorage.getItem(KEY));state=valid(saved)?saved:fresh();}catch{state=fresh();storageOK=false;}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch{storageOK=false;}}
+const getQuestion=id=>QUESTIONS.find(q=>q.id===id);
+const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function render(){save();if(state.done)return results();const q=getQuestion(state.order[state.index]),count=Object.keys(state.answers).length;
+app.innerHTML=`<div class="layout"><aside class="panel sidebar" aria-label="Navegación del examen"><div class="eyebrow">Intento ${state.attempt}</div><p class="count" style="margin:10px 0">${count} <span class="small">/ 32 respondidas</span></p><div class="progress" role="progressbar" aria-label="Preguntas respondidas" aria-valuenow="${count}" aria-valuemin="0" aria-valuemax="32"><div style="width:${count/32*100}%"></div></div><div class="grid">${state.order.map((id,i)=>`<button class="jump ${state.answers[id]!==undefined?'answered':''} ${i===state.index?'current':''}" data-jump="${i}" aria-label="Pregunta ${i+1}${state.answers[id]!==undefined?', respondida':', pendiente'}" ${i===state.index?'aria-current="step"':''}>${i+1}</button>`).join('')}</div><p class="note">Podés volver a cualquier pregunta y cambiar tu respuesta antes de entregar.</p><button class="btn primary finish" id="finish">Finalizar examen</button></aside><section class="panel" aria-labelledby="question"><span class="badge">${q.group}</span><span class="badge topic">${q.topic}</span><p class="question-number">PREGUNTA ${state.index+1} DE 32 · GUÍA #${q.id}</p><h2 id="question" tabindex="-1">${q.question}</h2><div class="options" role="radiogroup" aria-labelledby="question">${state.options[q.id].map((v,i)=>`<label class="option"><input type="radio" name="answer" value="${v}" ${state.answers[q.id]===v?'checked':''}><span><span class="letter">${'ABC'[i]}.</span> ${q.options[v]}</span></label>`).join('')}</div><div class="actions"><button class="btn" id="prev" ${state.index===0?'disabled':''}>← Anterior</button><button class="btn primary" id="next">${state.index===31?'Revisar y entregar':'Siguiente →'}</button></div><p class="note" id="save-note" aria-live="polite">${storageOK?'Tu progreso se guarda automáticamente.':'El guardado no está disponible. Mantené esta pestaña abierta.'}</p></section></div>`;
+app.querySelectorAll('[data-jump]').forEach(b=>b.onclick=()=>go(Number(b.dataset.jump)));app.querySelectorAll('input').forEach(input=>input.onchange=()=>{state.answers[q.id]=Number(input.value);save();const focused=input.value;render();app.querySelector(`input[value="${focused}"]`).focus();});app.querySelector('#prev').onclick=()=>go(state.index-1);app.querySelector('#next').onclick=()=>state.index===31?confirmEnd():go(state.index+1);app.querySelector('#finish').onclick=confirmEnd;}
+function go(index){state.index=index;render();document.querySelector('#question').focus();}
+function confirmEnd(){const pending=32-Object.keys(state.answers).length;document.querySelector('#confirm-text').textContent=pending?`Te quedan ${pending} preguntas sin responder. Si entregás ahora, contarán como incorrectas.`:'Respondiste las 32 preguntas. Vas a ver tu puntaje y las explicaciones.';dialog.showModal();}
+document.querySelector('#cancel').onclick=()=>dialog.close();document.querySelector('#deliver').onclick=()=>{dialog.close();state.done=true;filter='all';render();window.scrollTo({top:0,behavior:'smooth'});};
+function results(){const correct=QUESTIONS.filter(q=>state.answers[q.id]===0).length;const groups=[...new Set(QUESTIONS.map(q=>q.group))];const pending=32-Object.keys(state.answers).length;
+app.innerHTML=`<section aria-label="Resultado"><div class="score"><div><div class="eyebrow" style="color:#d6e5b7">Resultado · Intento ${state.attempt}</div><strong>${correct}<span style="font-size:28px;color:#bdcfbd"> / 32</span></strong><p>${Math.round(correct/32*100)}% de aciertos · ${32-correct-pending} incorrectas · ${pending} sin responder</p></div><button class="btn" id="retry">Repetir examen ↗</button></div><h2>Tu desempeño por tema</h2><div class="topics">${groups.map(g=>{const qs=QUESTIONS.filter(q=>q.group===g);return `<div class="topic-result"><small>${g}</small><strong>${qs.filter(q=>state.answers[q.id]===0).length} / ${qs.length} correctas</strong></div>`;}).join('')}</div><h2>Aprendé de cada respuesta</h2><p class="small">La respuesta correcta y su explicación aparecen debajo de cada pregunta.</p><div class="filter"><button class="btn ${filter==='all'?'active':''}" data-filter="all">Todas (32)</button><button class="btn ${filter==='errors'?'active':''}" data-filter="errors">Errores y pendientes (${32-correct})</button></div><div id="reviews">${state.order.map((id,i)=>{const q=getQuestion(id),answer=state.answers[id],ok=answer===0;if(filter==='errors'&&ok)return '';return `<article class="panel review"><span class="status ${ok?'good':'bad'}">${ok?'✓ Correcta':answer===undefined?'○ Sin responder':'✕ Incorrecta'}</span><span class="badge topic" style="margin-left:10px">${q.topic}</span><div class="small">${q.group} · Guía #${q.id}</div><h3>${i+1}. ${q.question}</h3>${!ok?`<p class="answer wrong"><b>Tu respuesta:</b> ${answer===undefined?'No seleccionaste una opción.':escapeHTML(q.options[answer])}</p>`:''}<p class="answer"><b>Respuesta correcta:</b> ${q.options[0]}</p><p class="explain"><b>${ok?'Por qué es correcta:':'Para repasar:'}</b> ${q.explanation}</p>${q.source?`<a class="source" href="${q.source}" target="_blank" rel="noopener noreferrer">Consultar fuente ↗</a>`:''}</article>`;}).join('')||'<div class="panel"><h3>¡Sin errores para repasar!</h3><p>Respondiste correctamente las 32 preguntas.</p></div>'}</div></section>`;
+app.querySelector('#retry').onclick=()=>{state=fresh(state);filter='all';render();window.scrollTo({top:0,behavior:'smooth'});};app.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;results();});}
+render();
+
+}};
+function show(){
+ const requested=location.hash.slice(1);
+ const name=Object.prototype.hasOwnProperty.call(pages,requested)?requested:'inicio';
+ const page=pages[name];
+ document.getElementById('page-style').textContent=page.css;
+ document.title=page.title;
+ document.body.innerHTML=page.body;
+ if(start[name])start[name]();
+ window.scrollTo({top:0});
+}
+window.addEventListener('hashchange',show);
+show();
+})();</script></body></html>
